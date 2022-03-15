@@ -4,6 +4,8 @@ published = false
 ---
 This repository contains the Wasm Language Guide from Fermyon.com. You can see the published version at [https://www.fermyon.com/wasm-languages/webassembly-language-support](https://www.fermyon.com/wasm-languages/webassembly-language-support).
 
+The content in this repo (including this page) are formatted to be served directly from [Bartholomew](https://github.com/fermyon/bartholomew).
+
 ## Contributions
 
 We welcome contributors. To make changes or additions, create new pull requests against this repository.
