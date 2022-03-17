@@ -36,6 +36,7 @@ There are also other Ruby implementations that we have not tested.
 
 Here are some great resources:
 
+- An update on [the state of Ruby, Wasm, and WASI](https://medium.com/@kateinoigakukun/final-report-webassembly-wasi-support-in-ruby-4aface7d90c9) in March, 2022
 - The [pull request to merge wasm32-wasi in Ruby](https://bugs.ruby-lang.org/issues/18462)
 - Instructions for [building Ruby with wasm32-wasi support](https://github.com/ruby/ruby/pull/5407)
 - [Rlang](https://github.com/ljulliar/rlang) compiles a subset of the Ruby language to Wasm
