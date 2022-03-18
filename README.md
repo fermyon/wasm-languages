@@ -1,7 +1,8 @@
-# Fermyon WebAssembly Language Guide <!--
+# Fermyon WebAssembly Language Guide
 title = "Readme"
+
 published = false
-## -->
+
 ---
 This repository contains the Wasm Language Guide from Fermyon.com. You can see the published version at [https://www.fermyon.com/wasm-languages/webassembly-language-support](https://www.fermyon.com/wasm-languages/webassembly-language-support).
 
