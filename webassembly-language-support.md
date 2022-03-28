@@ -57,6 +57,7 @@ Some languages, like CSS, PowerShell, and "Shell", don't really have a meaningfu
 | ------------------------- | ------- | --- | ---- | ----- |
 | [AssemblyScript][AssemblyScript] | ✅  | ✅ | ✅ | |
 | [Grain][Grain]                   | ✅  | ✅ | ✅ | |
+| [Motoko][Motoko]                 | ✅  | ✅ | ✅ | |
 
 ## Other Notable Languages
 
@@ -97,6 +98,7 @@ If you find an error or are interested in an addition, [let us know](https://twi
 
 [AssemblyScript]: /wasm-languages/assemblyscript
 [Grain]: /wasm-languages/grain
+[Motoko]: /wasm-languages/motoko
 
 [Cobol]: /wasm-languages/cobol
 [Erlang]: /wasm-languages/erlang-beam
