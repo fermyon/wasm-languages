@@ -1,5 +1,5 @@
 date = "2022-01-12T00:23:27Z"
-title = "C# in WebAssembly"
+title = "C# (and .NET) in WebAssembly"
 description = "C# (C-sharp) is backed by the .NET (dotnet) ecosystem, whose Wasm support is rapidly maturing."
 tags = ["c#", "csharp", "dotnet", ".net", "webassembly"]
 template = "page_lang"
@@ -26,6 +26,7 @@ In addition, browser-based support also seems to be available in the [Elements c
 Things we like:
 
 - Blazor is enjoying a surge of popularity in the browser
+- The .NET WASI Runtime looks excellent
 
 For the most part, though, it is too early to speculate on the rest of the .NET tooling.
 
