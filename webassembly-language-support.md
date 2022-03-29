@@ -32,7 +32,7 @@ Some languages, like CSS, PowerShell, and "Shell", don't really have a meaningfu
 | Language                  | Browser | Other | WASI | Notes |
 | ------------------------- | ------- | --- | ---- | ----- |
 | [JavaScript][JavaScript]  | ⏳  | ⏳ | ⏳ | |
-| [Python][Python]          | ⏳ | ⏳ | ⏳ |  |
+| [Python][Python]          | ⏳ | ✅  | ✅  |  |
 | [Java][Java]              |  ✅  | ✅  | ❌ ||
 | [PHP][PHP]                | ✅ | ❌ | ❌ ||
 | CSS                       | N/A | N/A | N/A |  |
