@@ -37,7 +37,7 @@ Some languages, like CSS, PowerShell, and "Shell", don't really have a meaningfu
 | [PHP][PHP]                | ✅ | ❌ | ❌ ||
 | CSS                       | N/A | N/A | N/A |  |
 | [C++][CPLUSPLUS]          | ✅  | ✅ | ✅ | |
-| [C#][CSHARP]              | ✅ | ⏳ | ⏳ | Covers .NET as well |
+| [C# and .NET][CSHARP]     | ✅ | ✅ | ✅ | Covers .NET as well |
 | [TypeScript][TypeScript]  |  ❌  | ⏳ | ❌ | Consider [AssemblyScript](/wasm-languages/assemblyscript)|
 | [Ruby][Ruby]              | ⏳ | ✅ | ✅ |  |
 | [C][C]                    | ✅  | ✅ | ✅ | |
