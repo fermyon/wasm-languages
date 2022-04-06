@@ -12,21 +12,34 @@ Erlang is the most prominent of the [BEAM languages](https://github.com/llaisdy/
 
 The Lumen project is endeavoring to create a BEAM runtime and a compiler so that the BEAM applications can be run in a WebAssembly host environment. 
 
-## Uses
-
-The original goal of the Lumen project was to run Elixir in the web browser.
-
-> The primary motivator for Lumen's development was the ability to compile Elixir applications that could target WebAssembly, enabling use of Elixir as a language for frontend development.
-
-We are not clear on whether or not this is possible as of yet.
-
 ## Available Implementations
 
-Lumen is the primary contender, and is interesting because if it is successful we will see support not just for Erlang, but for Elixir and other BEAM languages.
+Lumen is a [compiler and runtime](https://github.com/lumen/lumen).
+
+## Usage
+
+It is not immediately clear what the intended usage pattern for Lumen and WebAssembly is.
+
+## Pros and Cons
+
+Things we like:
+
+- The idea of having both runtime and code compile is cool
+
+Things we're not big fans of:
+
+- We could not immediately figure out exactly how Lumen works, and builds appear to be failing
+- The project might be stalled or unmaintained. It has not been updated in over a year.
+
+
+## Example
+
+>> All of our examples follow [a documented pattern using common tools](/wasm-languages/about-examples).
+
+No example is available at this time.
 
 ## Learn More
 
 Here are some great resources:
 
-- Lumen is a [compiler and runtime](https://github.com/lumen/lumen)
 - Erlang fans may also appreciate [Lunatic](https://lunatic.solutions/), a WebAssembly platform built using an Erlang-style OTP. It will soon support WASI.

@@ -12,20 +12,43 @@ Go was early to the WebAssembly game, with the Go compiler producing `wasm32` ou
 But the core Go tools have fallen behind.
 Instead, the alterative Go implementation called [TinyGo](https://tinygo.org/) seems to have taken the lead.
 
-## Uses
-
-TinyGo can compile to `wasm32-wasi`, and TinyGo apps can be run on the Fermyon Platform.
-
 ## Available Implementations
 
 - Go supports browser-based WebAssembly
 - TinyGo supports `wasm32-wasi` as a build target
 - The [Elements compiler](https://www.elementscompiler.com/elements/) may also support compiling browser-oriented Wasm
 
+We have had the best luck with TinyGo.
+
+## Usage
+
+With TinyGo, it is possible to compile _most_ Go code into Wasm with WASI support.
+That means you can write Go code targeting the Fermyon Platform.
+
+## Pros and Cons
+
+
+Things we like:
+
+- TinyGo works very well
+
+Things we're not big fans of:
+
+- Upstream (mainline) Go does not have WASI support
+- TinyGo is still missing (mostly reflection-based) features of Go
+
+
+## Example
+
+>> All of our examples follow [a documented pattern using common tools](/wasm-languages/about-examples).
+
+TinyGo can compile to `wasm32-wasi`, and TinyGo apps can be [run on the Fermyon Platform](https://spin.fermyon.dev/go-components/).
+
 ## Learn More
 
 Here are some great resources:
 
 - TinyGo has [a step-by-step walkthrough](https://tinygo.org/docs/guides/webassembly/) for building and running Go WebAssembly modules
+- There are [instructions](https://spin.fermyon.dev/go-components/) and [examples](https://github.com/fermyon/spin-kitchensink)
 - Get started quickly with [Yo-Wasm](https://github.com/deislabs/yo-wasm), which has support for Go as well as several other languages.
 - A [short article](https://golangbot.com/webassembly-using-go/) on compiling to Go's "JS/Wasm" target

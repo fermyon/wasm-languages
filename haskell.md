@@ -8,16 +8,46 @@ author = "Fermyon Staff"
 ---
 # Haskell in WebAssembly
 
+[Haskell](https://www.haskell.org/) is a purely functional programming language.
+
+## Available Implementations
+
 The Asterius project compiles Haskell to WebAssembly.
 
-## Uses
+## Usage
 
 Asterius targets Node.js and the browser.
 It also appears to support `wasm32-wasi`, though we have not tested it.
 
-## Available Implementations
+## Pros and Cons
 
-- Asterius is the only known implementation of an Haskell-to-WebAssembly compiler.
+<!-- List out some pros and cons of this language vs others WHEN IT COMES TO WASM 
+
+For example, might point out that the Swift runtime requires large binaries or that
+an unofficial implementation lags behind the core language's feature set. Or might
+point out really good tooling or performance.
+
+
+Things we like:
+
+- 
+
+We're neutral about:
+
+- 
+
+Things we're not big fans of:
+
+- 
+-->
+None yet.
+
+
+## Example
+
+>> All of our examples follow [a documented pattern using common tools](/wasm-languages/about-examples).
+
+No example yet.
 
 ## Learn More
 
