@@ -128,6 +128,37 @@ $ curl localhost:3000
 Hello, World
 ```
 
+### Compiling C using the Zig compiler toolchain
+
+Users have reported that it is easier to compile C programs with Zig. With Zig, you will not need to separately install the WASI SDK, as it is included with the toolchain.
+
+Once again, here is our program:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    printf("Content-Type: text/plain\n\n");
+    printf("Hello, World\n");
+}
+```
+
+To compile with Zig, use a `zig build-exe` with the `-lc` ("library C") flag:
+
+```console
+$ zig build-exe -O ReleaseSmall -target wasm32-wasi hello.c -lc
+```
+
+Now the `hello.wasm` can be run in `wasmtime` or `spin`.
+
+```console
+$ wasmtime hello.wasm
+Content-Type: text/plain
+
+Hello, World
+```
+
 ## Learn More
 
 Here are some great resources:
