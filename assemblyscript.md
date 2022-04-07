@@ -245,7 +245,8 @@ For more on running AssemblyScript in the browser, read the [AssemblyScript docu
 
 Here are some great resources:
 
-- [yo-wasm](https://github.com/deislabs/yo-wasm) can help you generate an AssemblyScript project
 - Wasm-by-Example has a good [code walkthrough](https://wasmbyexample.dev/examples/wasi-hello-world/wasi-hello-world.assemblyscript.en-us.html)
+- This [blog post](https://blog.ttulka.com/learning-webassembly-9-assemblyscript-basics) covers the basics.
 - Here's an example of [A Wagi app written in AssemblyScript](https://github.com/deislabs/hello-wagi-as)
 - Fastly's blog [also has an intro to AssemblyScript](https://www.fastly.com/blog/meet-assemblyscript-your-next-computing-language)
+- [yo-wasm](https://github.com/deislabs/yo-wasm) can help you generate an AssemblyScript project
