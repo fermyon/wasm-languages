@@ -41,7 +41,45 @@ Things we're not big fans of:
 
 >> All of our examples follow [a documented pattern using common tools](/wasm-languages/about-examples).
 
-No examples yet
+To use Grain, you will need to [install the Grain toolkit](https://grain-lang.org/docs/getting_grain).
+
+Start with a `hello.gr` file:
+
+```grain
+print("content-type: text/plain\n")
+print("\n)
+print("Hello, World!")
+```
+
+Compile the program with the `grain` compiler:
+
+```console
+$ grain hello.gr
+```
+
+The above will produce a `hello.gr.wasm` file. As usual, you can run `wasmtime hello.gr.wasm` to see the output. The first time you compile a grain application, it will take a long time. After that, compiling is much faster.
+
+To run the WebAssembly app with Spin, create a `spin.toml` file:
+
+```
+spin_version = "1"
+authors = ["Fermyon Engineering <engineering@fermyon.com>"]
+description = "Grain example."
+name = "spin-grain"
+trigger = { type = "http", base = "/" }
+version = "1.0.0"
+
+[[component]]
+id = "grain-hello"
+source = "hello.gr.wasm"
+[component.trigger]
+route = "/"
+# Spin components written in Grain use the Wagi HTTP executor
+executor = { type = "wagi" }
+```
+
+From there, you can use `spin up` to start a server, and see the results on `http://localhost:3000`.
+
 
 ## Learn More
 
