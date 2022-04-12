@@ -31,6 +31,11 @@ That means you can write Go code targeting the Fermyon Platform.
 Things we like:
 
 - TinyGo works very well
+- Spin has full support for Go
+
+We're neutral about:
+
+- The resulting binary sizes start at around 300k, but can rapidly climb 
 
 Things we're not big fans of:
 
@@ -52,14 +57,28 @@ module github.com/fermyon/example-go
 go 1.17
 ```
 
+Since Spin has a Go SDK which is nice and easy to use, we'll fetch that and use it:
+
+```console
+$ go mod download github.com/fermyon/spin/sdk/go
+```
+
 Next, create a simple Go program named `main.go`:
 
 ```go
 package main
 
+import (
+	"fmt"
+	"net/http"
+
+	spin "github.com/fermyon/spin/sdk/go/http"
+)
+
 func main() {
-	println("Content-Type: text/plain\n")
-    println("Hello, World!")
+	spin.HandleRequest(func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintln(w, "Hello, World!")
+	})
 }
 ```
 
@@ -80,7 +99,7 @@ trigger = { type = "http", base = "/" }
 version = "1.0.0"
 
 [[component]]
-id = "go-hello"
+id = "hello"
 source = "main.wasm"
 [component.trigger]
 route = "/"
@@ -88,7 +107,12 @@ route = "/"
 executor = { type = "wagi" }
 ```
 
-From there, it's just a matter of using `spin up` to start the server.
+From there, it's just a matter of using `spin up` to start the server. As usual, we can test using a web browser or Curl:
+
+```console
+$ curl localhost:3000/
+Hello, World!
+```
 
 ## Learn More
 
