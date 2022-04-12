@@ -69,7 +69,7 @@ These languages enjoy broad use (though perhaps not in the top 20) and have at l
 | [Erlang (BEAM)][Erlang]   | ⏳ | ⏳ | ⏳ |  |
 | [Haskell][Haskell]        | ✅  | ✅ | ✅ | |
 | [Lisp][Lisp]              | ⏳ | ⏳ | ⏳ |  |
-| Lua |
+| [Lua][Lua]                | ✅ | ❌ | ❌ |  |
 | Perl |
 | [Zig][Zig]                | ✅  | ✅ | ✅ | |
 
@@ -104,4 +104,5 @@ If you find an error or are interested in an addition, [let us know](https://twi
 [Erlang]: /wasm-languages/erlang-beam
 [Haskell]: /wasm-languages/haskell
 [Lisp]: /wasm-languages/lisp
+[Lua]: /wasm-languages/lua
 [Zig]: /wasm-languages/zig
