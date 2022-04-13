@@ -29,5 +29,6 @@ WebAssembly is supported in the official Rust distribution.
 Here are some great resources:
 
 - Rust has a [dedicated mini-site covering WebAssembly](https://www.rust-lang.org/what/wasm)
+- The Rust Linz group did a [presentation on Rust and Wagi](https://www.youtube.com/watch?v=9NDwHBjLlhQ) and posted a GitHub [repo full of Wagi examples](https://github.com/rstropek/rust-samples)
 - [Wasmtime](https://wasmtime.dev/) is the reference implementation of Wasm32-WASI.
 - [egui](https://www.egui.rs/) provides a GUI toolkit that can be compiled into Wasm and run in the browser
