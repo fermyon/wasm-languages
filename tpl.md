@@ -3,7 +3,10 @@ title = "Python in WebAssembly"
 description = "can be compiled to WebAssembly."
 tags = ["language", "webassembly"]
 template = "page_lang"
+
+# DELETE THIS LINE before opening a PR
 published = false
+
 [extra]
 author = "Fermyon Staff"
 ---
