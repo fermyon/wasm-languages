@@ -2,13 +2,10 @@ date = "2022-03-08T23:31:10Z"
 title = "About WebAssembly Examples"
 description = "The WebAssembly examples all follow some common patterns. This page explains them"
 template = "page"
-
-# Most important first. Try to get at least 3 for a blog post.
 tags = ["webassembly", "examples"]
 
 [extra]
 author = "Fermyon Staff"  # Use "Fermyon Staff" for general content
-# author_page = "/author/"
 type = "page"
 ---
 
@@ -25,10 +22,12 @@ Providing detailed language-specific examples is beyond the scope of the languag
 
 Our canonical example is to build a simple web page that prints `Hello, World` in plain text. In order to serve it as a web page, we try to write the script using one of two tools:
 
-- Spin, which supports fewer languages, but provides a great experience
-- [Wagi](https://github.com/deislabs/wagi), which supports all languages that have [WASI support](https://wasi.dev/)
+- [Spin](https://spin.fermyon.dev/), a framework for building WebAssembly-based web applications and microservices.
+- [Wagi](https://github.com/deislabs/wagi), used in older content from before Spin was released. All Wagi applications run on Spin (though you must use a `spin.toml` instead of a `modules.toml`)
 
-We also try to make sure that our example runs with [wasmtime](https://wasmtime.dev/), which is committed to implementing the WASI specification.
+For commandline examples, the example runs with [wasmtime](https://wasmtime.dev/), which is committed to implementing the WASI specification.
+
+Other runtimes and execution environments are out of the scope of this documentation. However, you may find links to examples in the _Learn More_ section at the bottom of each language page
 
 To that end, the simplest example, written in Swift, looks like this:
 
@@ -46,16 +45,46 @@ content-type: text/plain
 Hello, World
 ```
 
-When executed on Wagi and accessed via Curl, it should look like this:
+When executed on Spin (or Wagi) and accessed via Curl, it should look like this:
 
 ```console
 $ curl localhost:3000                                       
 Hello, World
 ```
 
+## Libraries, SDKs, and Helpers
+
+Generally, if there is a useful library, SDK, or helper, examples will use the best one. Many times, a language's CGI library can be used with Wagi-style invocations on Spin or Wagi. Additionally, Spin has SDKs for a growing list of languages.
+
+In the end, though, every Wagi executor (on Spin) [uses the same CGI-like mechanism](https://github.com/deislabs/wagi/blob/main/docs/architecture.md) to read a request and write a response.
+
+## Spin Configuration
+
+Newer examples use a `spin.toml` to show how the program is executed with Spin. The generic `spin.toml` looks something like this:
+
+```toml
+spin_version = "1"
+authors = ["Fermyon Engineering <engineering@fermyon.com>"]
+description = "Hello world app."
+name = "spin-hello"
+trigger = { type = "http", base = "/" }
+version = "1.0.0"
+
+[[component]]
+id = "hello"
+source = "main.wasm"
+[component.trigger]
+route = "/"
+executor = { type = "wagi" }
+```
+
+The format and fields for this are defined in the [official Spin configuration docs](https://spin.fermyon.dev/configuration/).
+
+The command to start a Spin server is `spin up`. This will typically start a server on `http://localhost:3000` unless you specify otherwise.
+
 ## Wagi Configuration
 
-When we use WebAssembly on the cloud, we usually store our packages in a [Bindle server](https://github.com/deislabs/bindle). But for our examples here, we use Wagi's simple `modules.toml` format. A simple example looks like this:
+Older examples us Wagi instead of Spin. They may provide examples that use a `modules.toml` file instead of a `spin.toml` file. A simple example looks like this:
 
 ```toml
 [[module]]
