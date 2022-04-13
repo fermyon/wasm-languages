@@ -27,7 +27,7 @@ There are three popular ways of building JavaScript into WebAssembly.
 2. Use the QuickJS implementation and compile the runtime and script into a Wasm module
 3. Use the Ducktape implementation of a JavaScript runtime, usually to "safe eval" JS inside of JS using Wasm as an indirection layer 
 
-Recently, Suborbital has introduced a version of [Javvy](https://github.com/suborbital/javy) that supports some of their extensions.
+Recently, Suborbital has introduced a version of [Javy](https://github.com/suborbital/javy) that supports some of their extensions.
 
 ## Learn More
 
