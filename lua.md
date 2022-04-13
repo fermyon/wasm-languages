@@ -18,7 +18,7 @@ The following unofficial projects compile or run Lua in WebAssembly:
 
 - [Wasmoon](https://github.com/ceifa/wasmoon) runs [Lua as a script](https://www.fermyon.com/blog/scripts-vs-compiled-wasm) in the browser via a Lua engine compiled to Wasm. It also works with Node.js and Deno, but does not appear to have WASI bindings.
 - [WebAssembly-Lua](https://github.com/ysugimoto/webassembly-lua) - Likely unmaintained emscripted-based compilation.
-- [Wasm_Lua]() is a project that compiles the Lua engine to WebAssembly, allowing you to run [Lua as a script](https://www.fermyon.com/blog/scripts-vs-compiled-wasm). It also appears to be unmaintained
+- [Wasm_Lua](https://github.com/vvanders/wasm_lua) is a project that compiles the Lua engine to WebAssembly, allowing you to run [Lua as a script](https://www.fermyon.com/blog/scripts-vs-compiled-wasm). It also appears to be unmaintained
 
 ## Usage
 
@@ -26,9 +26,7 @@ Wasmoon, the most promising of the above projects, is used to run Lua scripts (u
 
 ## Pros and Cons
 
-
 No details. 
-
 
 ## Example
 
