@@ -31,6 +31,11 @@ That means you can write Go code targeting the Fermyon Platform.
 Things we like:
 
 - TinyGo works very well
+- Spin has full support for Go
+
+We're neutral about:
+
+- The resulting binary sizes start at around 300k, but can rapidly climb 
 
 Things we're not big fans of:
 
@@ -42,7 +47,72 @@ Things we're not big fans of:
 
 >> All of our examples follow [a documented pattern using common tools](/wasm-languages/about-examples).
 
-TinyGo can compile to `wasm32-wasi`, and TinyGo apps can be [run on the Fermyon Platform](https://spin.fermyon.dev/go-components/).
+TinyGo can compile to `wasm32-wasi`, and TinyGo apps can be [run on the Fermyon Platform](https://spin.fermyon.dev/go-components/). You will need to [install TinyGo](https://tinygo.org/getting-started/) to do this example. Note that you also have to have [Go installed](https://go.dev/learn/)
+
+As with any Go project, the first step is to create a `go.mod` file:
+
+```
+module github.com/fermyon/example-go
+
+go 1.17
+```
+
+Since Spin has a Go SDK which is nice and easy to use, we'll fetch that and use it:
+
+```console
+$ go mod download github.com/fermyon/spin/sdk/go
+```
+
+Next, create a simple Go program named `main.go`:
+
+```go
+package main
+
+import (
+	"fmt"
+	"net/http"
+
+	spin "github.com/fermyon/spin/sdk/go/http"
+)
+
+func main() {
+	spin.HandleRequest(func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintln(w, "Hello, World!")
+	})
+}
+```
+
+When it comes to compiling, though, we will need to use TinyGo instead of Go. This particular set of flags has produced the best results for us:
+
+```
+tinygo build -wasm-abi=generic -target=wasi -gc=leaking -o main.wasm main.go
+```
+
+The above will output a `main.wasm` file. A simple `spin.toml` for running the above in Spin looks like this:
+
+```toml
+spin_version = "1"
+authors = ["Fermyon Engineering <engineering@fermyon.com>"]
+description = "Hello world app."
+name = "spin-go-hello"
+trigger = { type = "http", base = "/" }
+version = "1.0.0"
+
+[[component]]
+id = "hello"
+source = "main.wasm"
+[component.trigger]
+route = "/"
+# Spin components written in Go use the Wagi HTTP executor
+executor = { type = "wagi" }
+```
+
+From there, it's just a matter of using `spin up` to start the server. As usual, we can test using a web browser or Curl:
+
+```console
+$ curl localhost:3000/
+Hello, World!
+```
 
 ## Learn More
 
