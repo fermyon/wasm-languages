@@ -2,6 +2,8 @@ date = "2022-02-15T00:18:54Z"
 title = "Lisp in WebAssembly"
 description = "Lisp can be compiled to WebAssembly."
 tags = ["language", "webassembly"]
+template = "page_lang"
+
 [extra]
 author = "Fermyon Staff"
 ---
