@@ -44,7 +44,7 @@ Things we like:
 - Spin usually has Rust support for features before it has support for other languages
 - Wasmtime, written in Rust, often has cutting edge features before other runtimes
 - We have used many Rust libraries off the shelf with WebAssembly
-- Thanks to Cargo's flexible build system, some crates even have special feature flags to enable Wasm featuers (e.g. Chrono)
+- Thanks to Cargo's flexible build system, some crates even have special feature flags to enable Wasm features (e.g. Chrono)
 - Because of Rust's memory management techniques, Rust binary sizes are small compared to similar languages
 
 
