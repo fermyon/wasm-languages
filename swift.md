@@ -9,7 +9,7 @@ author = "Fermyon Staff"
 # Swift in WebAssembly
 
 Swift is a popular language in the Apple ecosystem.
-But it is no no longer just for iOS apps.
+But it is no longer just for iOS apps.
 Thanks to a recent community-led project, it is possible to [compile Swift into WebAssembly](https://swiftwasm.org/)
 destined either for the browser or for a WASI environment.
 
