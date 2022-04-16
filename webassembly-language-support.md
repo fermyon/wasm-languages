@@ -70,7 +70,7 @@ These languages enjoy broad use (though perhaps not in the top 20) and have at l
 | [Haskell][Haskell]        | ✅  | ✅ | ✅ | |
 | [Lisp][Lisp]              | ⏳ | ⏳ | ⏳ |  |
 | [Lua][Lua]                | ✅ | ❌ | ❌ |  |
-| Perl |
+| [Perl][Perl]              | ✅ | ❌ | ❌ |  |
 | [Zig][Zig]                | ✅  | ✅ | ✅ | |
 
 ## Updates and Additions
@@ -105,4 +105,5 @@ If you find an error or are interested in an addition, [let us know](https://twi
 [Haskell]: /wasm-languages/haskell
 [Lisp]: /wasm-languages/lisp
 [Lua]: /wasm-languages/lua
+[perl]: /wasm-languages/perl
 [Zig]: /wasm-languages/zig
