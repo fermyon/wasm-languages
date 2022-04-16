@@ -93,3 +93,5 @@ route = "/"
 ```
 
 Then we start `wagi` with `wagi -c modules.toml`.
+
+>> If you are interested in contributing to this guide, head on over to [the GitHub repo](https://github.com/fermyon/wasm-languages).
