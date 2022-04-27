@@ -22,6 +22,8 @@ For each environment, we use the following icons to indicate a level of support:
 
 The Fermyon Platform requires [WASI](https://wasi.dev) support. Any language that has a ✅ for WASI should be supported on the Fermyon Platform.
 
+>> If you are interested in contributing to this guide, head on over to [the GitHub repo](https://github.com/fermyon/wasm-languages).
+
 We are often asked which languages are best supported for production-grade WebAssembly. We suggest [C][C]/[C++][CPLUSPLUS], [Rust][Rust], and [AssemblyScript][AssemblyScript].
 
 ## WebAssembly Support in Top 20 Languages
@@ -75,7 +77,9 @@ These languages enjoy broad use (though perhaps not in the top 20) and have at l
 
 ## Updates and Additions
 
-If you find an error or are interested in an addition, [let us know](https://twitter.com/fermyontech).
+The source for the WebAssembly Language Guide is located in a [public GitHub project](https://github.com/fermyon/wasm-languages). If you find errors, want to make additions, or have further corrections for us, the [issue queue](https://github.com/fermyon/wasm-languages/issues) is a great place to discuss.
+
+If you're more interested in chatting about things, check out our [Discord server](https://discord.gg/AAFNfS7NGf) or hit us up a [@FermyonTech on Twitter](https://twitter.com/fermyontech)
 
 [JavaScript]: /wasm-languages/javascript
 [Python]: /wasm-languages/python
