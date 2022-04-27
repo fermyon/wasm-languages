@@ -77,7 +77,9 @@ These languages enjoy broad use (though perhaps not in the top 20) and have at l
 
 ## Updates and Additions
 
-If you find an error or are interested in an addition, [let us know](https://twitter.com/fermyontech).
+The source for the WebAssembly Language Guide is located in a [public GitHub project](https://github.com/fermyon/wasm-languages). If you find errors, want to make additions, or have further corrections for us, the [issue queue](https://github.com/fermyon/wasm-languages/issues) is a great place to discuss.
+
+If you're more interested in chatting about things, check out our [Discord server](https://discord.gg/AAFNfS7NGf) or hit us up a [@FermyonTech on Twitter](https://twitter.com/fermyontech)
 
 [JavaScript]: /wasm-languages/javascript
 [Python]: /wasm-languages/python
