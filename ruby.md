@@ -8,36 +8,179 @@ author = "Fermyon Staff"
 ---
 # Ruby in WebAssembly
 
-Ruby now has multiple WebAssembly-based projects.
+Ruby is one of the most popular scripting languages.
+Famous for the Rails framework, it has been a stalwart for web developers.
 
-A CRuby Wasm32-WASI implementation was merged into core in January 2022.
-That would give Ruby an official Wasm32-WASI build of the Ruby runtime.
-This does not compile Ruby scripts to Wasm, but runs the Ruby runtime itself in a Wasm interpreter.
-(This is similar to how the existing [JavaScript](/wasm-languages/javascript) and [Python](/wasm-languages/python) implementations work.)
+Ruby now has multiple WebAssembly-based projects, including an official release of CRuby.
 
-For the browser, the most promising Ruby technology for WebAssembly seems to be `Artichoke`, 
-which would provide a Ruby runtime as a WebAssembly module.
-In this case, one would be able to execute Ruby in the browser or on the commandline.
+# Available Implementations
 
-## Uses
+There is an official [Wasm build of Ruby](https://github.com/ruby/ruby.wasm/).
+It supports WASI and a wide array of features.
 
-We have tested the official Ruby patches and confirmed that they run in `wasm32-wasi`.
-This means Ruby apps can be written for the Fermyon Platform.
+In addition to the official Ruby distribution, [Artichoke](https://www.artichokeruby.org/) is a Rust implementation of Ruby that can compile to WebAssembly (`wasm32-unknown`).
 
-There are also other Ruby implementations that we have not tested.
+`rlang` (a subset of Ruby) can run Wasm32 code in a `wasm32-wasi` runtime like `wasmtime`.
 
-## Available Implementations
+In this guide, we focus on the official release of Ruby (`ruby.wasm`).
 
-- CRuby (official Ruby) can be built to `wasm32-wasi`
-- `rlang` (a subset of Ruby) can run Wasm32 code in a `wasm32-wasi` runtime like `wasmtime`.
- - `artichoke` is a new implementation of Ruby that will compile to Wasm.
+## Usage
+
+To use the official Ruby Wasm, [download a prebuilt binary](https://github.com/ruby/ruby.wasm/releases) and decompress the downloaded archive.
+
+Inside of the package, you will find a full distribution of Ruby:
+
+```console
+$ tree -L 3
+.
+├── usr
+│   └── local
+│       ├── bin
+│       ├── include
+│       ├── lib
+│       └── share
+└── var
+    └── lib
+        └── gems
+```
+
+The Wasm binaries are in `/usr/local/bin`. For example, to run the Ruby interpreter, you can use `wasmtime ./usr/local/bin/ruby`. The example section below illustrates usage.
+
+## Pros and Cons
+
+Things we like:
+
+- The toolchain has been very thoughtfully developed
+- It is possible to use gems that do not have C code. (We suspect there might be a way to use C extensions, but we haven't figured it out)
+
+We're neutral about:
+
+- The size of the interpreter is large, and can take a moment to start
+- Spin (and Wagi) need extra configuration to simulate a command line for Ruby
+
+Things we're not big fans of:
+
+- At this stage, users of the Wasm version will need to understand how Ruby loads its dependencies
+
+
+## Example
+
+>> All of our examples follow [a documented pattern using common tools](/wasm-languages/about-examples).
+
+Ruby can run in either Spin or Wagi. Here, we show how to use Spin.
+
+Start out with a new directory:
+
+```console
+$ mkdir hello-ruby
+$ cd hello-ruby
+```
+
+Now fetch a copy of the Ruby source from the [official releases](https://github.com/ruby/ruby.wasm/releases).
+For this example, we are downloading the `ruby-head-wasm32-unknown-wasi-full.tar.gz` version, 
+but one of the smaller versions works just as well.
+
+Now create a local `lib` dir where we will put our own source.
+It is also a good idea to create `.gem/`, though we won't use it in this example.
+
+```console
+$ mkdir lib
+$ mkdir .gem
+```
+
+At this point, our directory should look like this:
+
+```console
+$ tree -L 2 -a -d
+.
+├── .gem
+├── head-wasm32-unknown-wasi-full
+│   ├── usr
+│   └── var
+└── lib
+```
+
+Inside of `lib`, we can create `hello.rb`:
+
+```ruby
+puts "content-type: text/plain"
+puts ""
+puts "Hello, World"
+```
+
+You can verify this works by using `ruby lib/hello.rb`. 
+
+```console
+$ ruby lib/hello.rb
+content-type: text/plain
+
+Hello, World
+```
+
+Ruby is a scripting language, which means it will need to load a number of scripts (ours plus all of the built-in libraries) off of its filesystem. The `spin.toml` file for Ruby is more complex than most:
+
+```toml
+spin_version = "1"
+name = "example-ruby-app"
+version = "0.1.0"
+trigger = { type = "http", base = "/" }
+
+[[component]]
+files = [
+  { source = "lib", destination = "/lib" },
+  { source = ".gem", destination = "/.gem" },
+  { source = "ruby/usr", destination = "/usr" },
+]
+id = "ruby"
+source = "ruby.wasm"
+[component.trigger]
+executor = { type = "wagi", argv = "${SCRIPT_NAME} -v /lib/hello.rb ${SCRIPT_NAME} ${ARGS}" }
+route = "/"
+[component.environment]
+HOME = "/"
+GEM_HOME = "/.gem"
+```
+
+Note that we need to mount several sets of files: `lib`, `.gem`, and `usr`. This exposes all of Ruby's supporting files.
+(Remember: Ruby is a scripting language, and only the interpreter is compiled to Wasm. The rest is Ruby source.)
+
+While `lib` and `.gem` should point to your local dev environment, you need to load `usr` from the Ruby project.
+
+A few environment variables also need to be set for the interpreter: `HOME` and `GEM_HOME`.
+These should usually be set exactly as above.
+
+Next, running `spin up` will start the server.
+
+```console
+$ spin up
+Preparing Wasm modules is taking a few seconds...
+
+Serving HTTP on address http://127.0.0.1:3000
+```
+
+Note that the first line occurs because when Spin starts up, it does take Ruby a few moments to load all of its supporting files.
+_Using one of the [smaller instances](https://github.com/ruby/ruby.wasm/releases) will improve startup time
+and overall performance._
+
+From here, we can run our usual `curl` command or point a web browser to Spin:
+
+```console
+$ curl localhost:3000
+Hello, World
+```
+
+And that's all there is to it.
+
+>> If you need help with Ruby and Spin/Wagi, [join our Discord](https://discord.gg/AAFNfS7NGf) and ask. We know it's not the easiest environment to get running.
 
 ## Learn More
 
 Here are some great resources:
 
+- The [official project](https://github.com/ruby/ruby.wasm) explains building `ruby.wasm`
 - An update on [the state of Ruby, Wasm, and WASI](https://medium.com/@kateinoigakukun/final-report-webassembly-wasi-support-in-ruby-4aface7d90c9) in March, 2022
 - Instructions for [building Ruby with wasm32-wasi support](https://github.com/ruby/ruby/pull/5407)
+- A fun [dice roller browser app](https://repl-wasm.bcdice.org/) written in Ruby. Source is on [GitHub](https://github.com/bcdice/repl.wasm)
 - [Rlang](https://github.com/ljulliar/rlang) compiles a subset of the Ruby language to Wasm
 - [Artichoke](https://www.artichokeruby.org/) is a Rust implementation of Ruby that can compile to WebAssembly (`wasm32-unknown`)
 - The [mruby](https://github.com/mruby/mruby) runtime has been compiled to WebAssembly, which means you can interpret a Ruby script inside of a Wasm module
