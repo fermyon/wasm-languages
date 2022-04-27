@@ -141,7 +141,7 @@ HOME = "/"
 GEM_HOME = "/.gem"
 ```
 
-NOte that we need to mount several sets of files: `lib`, `.gem`, and `usr`. This exposes all of Ruby's supporting files.
+Note that we need to mount several sets of files: `lib`, `.gem`, and `usr`. This exposes all of Ruby's supporting files.
 (Remember: Ruby is a scripting language, and only the interpreter is compiled to Wasm. The rest is Ruby source.)
 
 While `lib` and `.gem` should point to your local dev environment, you need to load `usr` from the Ruby project.
