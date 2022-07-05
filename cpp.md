@@ -45,6 +45,7 @@ See the [example on the C page](/wasm-languages/c-lang#examples).
 
 Here are some great resources:
 
+- The [WebAssembly and C++](https://neugierig.org/software/blog/2022/06/wasm-c++.html) blog post by Evan Martin is a great analysis of the state of C++ dev for WebAssembly.
 - Cheerp is an [LLVM-based toolchain for compiling C++ to Wasm and JavaScript](https://github.com/leaningtech/cheerp-compiler). An overview [blog post](https://medium.com/leaningtech/cheerp-2-7-compile-cpp-to-webassembly-plus-javascript-c9b3ef7e318b) explains the basics.
 - Mozilla has a tutorial on [Compiling C++ to Wasm with Emscripten](https://developer.mozilla.org/en-US/docs/WebAssembly/C_to_wasm)
 - We love this [really cool slide presentation](https://nxxm.github.io/cppcon2018/CPP_EVERYWHERE_WITH_WASM.html#/) with a code walk of C++ in the browser
