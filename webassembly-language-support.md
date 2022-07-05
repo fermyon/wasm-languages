@@ -28,7 +28,7 @@ We are often asked which languages are best supported for production-grade WebAs
 
 ## WebAssembly Support in Top 20 Languages
 
-This reports on the top 20 languages from [RedMonk's ranking](https://redmonk.com/sogrady/2021/08/05/language-rankings-6-21/).
+This reports on the top 20 languages from [RedMonk's ranking](https://redmonk.com/sogrady/2022/03/28/language-rankings-1-22/).
 Some languages, like CSS, PowerShell, and "Shell", don't really have a meaningful expression in Wasm. However, we have left them here for completeness.
 
 | Language                  | Browser | Other | WASI | Notes |
@@ -38,8 +38,8 @@ Some languages, like CSS, PowerShell, and "Shell", don't really have a meaningfu
 | [Java][Java]              |  ✅  | ✅  | ❌ ||
 | [PHP][PHP]                | ✅ | ❌ | ❌ ||
 | CSS                       | N/A | N/A | N/A |  |
-| [C++][CPLUSPLUS]          | ✅  | ✅ | ✅ | |
 | [C# and .NET][CSHARP]     | ✅ | ✅ | ✅ | Covers .NET as well |
+| [C++][CPLUSPLUS]          | ✅  | ✅ | ✅ | |
 | [TypeScript][TypeScript]  |  ❌  | ⏳ | ❌ | Consider [AssemblyScript](/wasm-languages/assemblyscript)|
 | [Ruby][Ruby]              | ✅ | ✅ | ✅ |  |
 | [C][C]                    | ✅  | ✅ | ✅ | |
