@@ -81,6 +81,7 @@ Hello, World
 
 Here are some great resources:
 
+- A detailed document about  [the current state and features of Wasm](https://pythondev.readthedocs.io/wasm.html) in the latest CPython version
 - Fermyon.com published a slightly more [in-depth Python and Wasm tutorial](https://www.fermyon.com/blog/python-wagi)
 - An in-browser [Python shell in Wasm](https://github.com/ethanhs/python-wasm)
 - One version of [CPython + Wasm](https://github.com/ethanhs/python-wasm), where they are working on [WASI support](https://github.com/ethanhs/python-wasm/issues/18)
