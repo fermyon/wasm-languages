@@ -13,19 +13,6 @@ author = "Fermyon Staff"
 
 This guide tracks support for compiling a language to WebAssembly. It is organized into three sections: Support for the top 20 languages, WebAssembly-specific languages, and other notable languages. We track whether the language can be compiled to run in the browser, in other non-browser environments, and in a [WASI](https://wasi.dev) environment. In the detail page for each language, we do our best to not only state the current level of support, but also point to an array of useful resources.
 
-For each environment, we use the following icons to indicate a level of support:
-
-- ✅  Usable
-- ⏳ In progress
-- ❌ Not implemented
-- N/A Not applicable
-
-The Fermyon Platform requires [WASI](https://wasi.dev) support. Any language that has a ✅ for WASI should be supported on the Fermyon Platform.
-
->> If you are interested in contributing to this guide, head on over to [the GitHub repo](https://github.com/fermyon/wasm-languages).
-
-We are often asked which languages are best supported for production-grade WebAssembly. We suggest [C][C]/[C++][CPLUSPLUS], [Rust][Rust], and [AssemblyScript][AssemblyScript].
-
 ## WebAssembly Support in Top 20 Languages
 
 This reports on the top 20 languages from [RedMonk's ranking](https://redmonk.com/sogrady/2022/03/28/language-rankings-1-22/).
@@ -74,6 +61,21 @@ These languages enjoy broad use (though perhaps not in the top 20) and have at l
 | [Lua][Lua]                | ✅ | ❌ | ❌ |  |
 | [Perl][Perl]              | ✅ | ❌ | ❌ |  |
 | [Zig][Zig]                | ✅  | ✅ | ✅ | |
+
+## How To Read These Charts
+
+For each environment, we use the following icons to indicate a level of support:
+
+- ✅  Usable
+- ⏳ In progress
+- ❌ Not implemented
+- N/A Not applicable
+
+The Fermyon Platform requires [WASI](https://wasi.dev) support. Any language that has a ✅ for WASI should be supported on the Fermyon Platform.
+
+>> If you are interested in contributing to this guide, head on over to [the GitHub repo](https://github.com/fermyon/wasm-languages).
+
+We are often asked which languages are best supported for production-grade WebAssembly. We suggest [C][C]/[C++][CPLUSPLUS], [Rust][Rust], and [AssemblyScript][AssemblyScript].
 
 ## Updates and Additions
 
