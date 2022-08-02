@@ -42,6 +42,7 @@ Some languages, like CSS, PowerShell, and "Shell", don't really have a meaningfu
 | [Dart][Dart]              | ⏳ | ❌ | ❌ ||
 
 ## WebAssembly Specific Languages
+
 | Language                  | Browser | CLI | WASI | Notes |
 | ------------------------- | ------- | --- | ---- | ----- |
 | [AssemblyScript][AssemblyScript] | ✅  | ✅ | ✅ | |
@@ -83,6 +84,10 @@ The source for the WebAssembly Language Guide is located in a [public GitHub pro
 
 If you're more interested in chatting about things, check out our [Discord server](https://discord.gg/AAFNfS7NGf) or hit us up a [@FermyonTech on Twitter](https://twitter.com/fermyontech)
 
+## Relevant Standards
+
+Throughout our pages, we talk about technologies like WASI, Wagi, and Spin. Many of these are backed by formal documents. See the [Standards] page for links to the relevant texts along with helpful resources.
+
 [JavaScript]: /wasm-languages/javascript
 [Python]: /wasm-languages/python
 [Java]: /wasm-languages/java
@@ -113,3 +118,5 @@ If you're more interested in chatting about things, check out our [Discord serve
 [Lua]: /wasm-languages/lua
 [perl]: /wasm-languages/perl
 [Zig]: /wasm-languages/zig
+
+[Standards]: /wasm-languages/standards
