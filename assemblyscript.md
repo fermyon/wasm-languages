@@ -21,7 +21,7 @@ AssemblyScript has an [official implementation](https://www.assemblyscript.org/)
 
 ## Usage
 
-To get started with AssemblyScript, you will need to have a [Node.js environment](https://nodejs.org/en/), indcluding NPM.
+To get started with AssemblyScript, you will need to have a [Node.js environment](https://nodejs.org/en/), including NPM.
 
 From there, you can get started by creating a new Node project.
 
