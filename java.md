@@ -21,7 +21,7 @@ All of the existing Java implementations are browser oriented, and are designed 
 ## Available Implementations
 
 
-- The [Bytecoder project](https://mirkosertic.github.io/Bytecoder/) cross-compiles Java to WebAssembly that can be executed in the browswer
+- The [Bytecoder project](https://mirkosertic.github.io/Bytecoder/) cross-compiles Java to WebAssembly that can be executed in the browser
 - The [TeaVM project](https://teavm.org/) has experimental support for browser-based WebAssembly
 - A dedicate WebAssembly compiler called [JWebAssembly](https://github.com/i-net-software/JWebAssembly) can translate any JVM bytecode to WebAssembly, including Groovy, Clojure, and Kotlin. It, too, is browser-centric.
 - [CheerpJ](https://leaningtech.com/cheerpj/) is much more ambitious, handling the UI as well
