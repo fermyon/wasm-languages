@@ -88,4 +88,4 @@ Here are some great resources:
 - Recent work on [WASI support in Python](https://bugs.python.org/issue46315)
 - CPython has made progress on an [Emscripten-targeted Wasm target](https://bugs.python.org/issue40280). See also [this patch](https://github.com/python/cpython/pull/30495).
 - There is currently a patch for [Python 3.11](https://bugs.python.org/issue46315).
-- Much is happening on the WebAssembly Discord server. Check the `#python` channel.
+- Much is happening on the [WebAssembly Discord](https://discord.com/channels/453584038356058112/915046161126137856) server. Check the `#python` channel.
