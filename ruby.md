@@ -129,10 +129,10 @@ trigger = { type = "http", base = "/" }
 files = [
   { source = "lib", destination = "/lib" },
   { source = ".gem", destination = "/.gem" },
-  { source = "ruby/usr", destination = "/usr" },
+  { source = "head-wasm32-unknown-wasi-full/usr", destination = "/usr" },
 ]
 id = "ruby"
-source = "ruby.wasm"
+source = "head-wasm32-unknown-wasi-full/usr/local/bin/ruby"
 [component.trigger]
 executor = { type = "wagi", argv = "${SCRIPT_NAME} -v /lib/hello.rb ${SCRIPT_NAME} ${ARGS}" }
 route = "/"
