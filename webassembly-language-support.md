@@ -23,7 +23,7 @@ Some languages, like CSS, PowerShell, and "Shell", don't really have a meaningfu
 | [JavaScript][JavaScript]  | ⏳  | ⏳ | ⏳ | |
 | [Python][Python]          | ⏳ | ✅  | ✅  |  |
 | [Java][Java]              |  ✅  | ✅  | ❌ ||
-| [PHP][PHP]                | ✅ | ❌ | ❌ ||
+| [PHP][PHP]                | ✅ | ✅ | ✅ ||
 | CSS                       | N/A | N/A | N/A |  |
 | [C# and .NET][CSHARP]     | ✅ | ✅ | ✅ | Covers .NET as well |
 | [C++][CPLUSPLUS]          | ✅  | ✅ | ✅ | |

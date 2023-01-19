@@ -25,6 +25,7 @@ access to a database (SQLite) and file system access.
 - [PHP-Wasm](https://github.com/seanmorris/php-wasm)
 - The original version of PHP-In-Browser (PIB) was [Oraoto's version](https://oraoto.github.io/pib/)
 - Another version of PIB is [Soyuka's fork](https://github.com/soyuka/php-wasm)
+- [`wasm32-wasi` PHP releases](https://github.com/vmware-labs/webassembly-language-runtimes/releases?q=php&expanded=true) provided by the Wasm Labs team at VMware
 
 
 ## Learn More
@@ -34,4 +35,3 @@ Here are some great resources:
 - Try it out [in-browser](https://seanmorris.github.io/php-wasm/)
 - The [examples](https://github.com/seanmorris/php-wasm#examples) even include running Drupal 7!
 - If you are looking for a way to run Wasm inside of PHP, [Wasmer has bindings](https://github.com/wasmerio/wasmer-php)
-
