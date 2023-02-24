@@ -33,7 +33,7 @@ Some languages, like CSS, PowerShell, and "Shell", don't really have a meaningfu
 | [Swift][Swift]            | ✅  | ✅ | ✅ | |
 | [R][R]                    | ✅  | ❌ | ❌ | |
 | [Objective-C][ObjectiveC] | ❌  | ? | ❌ | |
-| Shell                     | N/A | N/A | N/A | Not a specific language |
+| [Shell][Shell]            | ✅ | ❌ | ❌ |  |
 | [Scala (native)][Scala]   | ❌  | ⏳ | ❌ | See [Java](/wasm-languages/java) |
 | [Go][Go]                  | ✅  | ✅ | ✅ | Via Go and TinyGo|
 | [PowerShell][PowerShell]  | ❌  | ❌ | ❌ | This is unlikely to change. |
@@ -100,6 +100,7 @@ Throughout our pages, we talk about technologies like WASI, Wagi, and Spin. Many
 [Swift]: /wasm-languages/swift
 [R]: /wasm-languages/r-lang
 [ObjectiveC]: /wasm-languages/objective-c
+[Shell]: /wasm-languages/shell
 [Scala]: /wasm-languages/scala
 [Go]: /wasm-languages/go-lang
 [PowerShell]: /wasm-languages/powershell
