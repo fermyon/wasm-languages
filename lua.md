@@ -20,6 +20,9 @@ The following unofficial projects compile or run Lua in WebAssembly:
 - [WebAssembly-Lua](https://github.com/ysugimoto/webassembly-lua) - Likely unmaintained emscripted-based compilation.
 - [Wasm_Lua](https://github.com/vvanders/wasm_lua) is a project that compiles the Lua engine to WebAssembly, allowing you to run [Lua as a script](https://www.fermyon.com/blog/scripts-vs-compiled-wasm). It also appears to be unmaintained
 
+It should also be possible to compile Lua interpreters written in Wasm-supported languages. For example, [Hematita](https://crates.io/crates/hematita), written in Rust, should be compilable to Wasm. This is the
+same technique [Bartholomew](https://developer.fermyon.com/bartholomew/index) uses for Rhai scripting. 
+
 ## Usage
 
 Wasmoon, the most promising of the above projects, is used to run Lua scripts (uncompiled) inside of browsers, Node, or Deno. The [documentation](https://github.com/ceifa/wasmoon#api-usage) describes usage.
