@@ -18,50 +18,69 @@ This guide tracks support for compiling a language to WebAssembly. It is organiz
 This reports on the top 20 languages from [RedMonk's ranking](https://redmonk.com/sogrady/2022/03/28/language-rankings-1-22/).
 Some languages, like CSS, PowerShell, and "Shell", don't really have a meaningful expression in Wasm. However, we have left them here for completeness.
 
-| Language                  | Browser | Other | WASI | Notes |
-| ------------------------- | ------- | --- | ---- | ----- |
-| [JavaScript][JavaScript]  | ⏳  | ⏳ | ⏳ | |
-| [Python][Python]          | ⏳ | ✅  | ✅  |  |
-| [Java][Java]              |  ✅  | ✅  | ❌ ||
-| [PHP][PHP]                | ✅ | ✅ | ✅ ||
-| CSS                       | N/A | N/A | N/A |  |
-| [C# and .NET][CSHARP]     | ✅ | ✅ | ✅ | Covers .NET as well |
-| [C++][CPLUSPLUS]          | ✅  | ✅ | ✅ | |
-| [TypeScript][TypeScript]  |  ❌  | ⏳ | ❌ | Consider [AssemblyScript](/wasm-languages/assemblyscript)|
-| [Ruby][Ruby]              | ✅ | ✅ | ✅ |  |
-| [C][C]                    | ✅  | ✅ | ✅ | |
-| [Swift][Swift]            | ✅  | ✅ | ✅ | |
-| [R][R]                    | ✅  | ❌ | ❌ | |
-| [Objective-C][ObjectiveC] | ❌  | ? | ❌ | |
-| [Shell][Shell]            | ✅ | ❌ | ❌ |  |
-| [Scala (native)][Scala]   | ❌  | ⏳ | ❌ | See [Java](/wasm-languages/java) |
-| [Go][Go]                  | ✅  | ✅ | ✅ | Via Go and TinyGo|
-| [PowerShell][PowerShell]  | ❌  | ❌ | ❌ | This is unlikely to change. |
-| [Kotlin][Kotlin]          | ✅ | ⏳ | ⏳ |  |
-| [Rust][Rust]              | ✅  | ✅ | ✅ | |
-| [Dart][Dart]              | ⏳ | ❌ | ❌ ||
+| Language                  | Core  | Browser | WASI | Spin SDK |
+| ------------------------- | ----- | ------- | ---- | -------- |
+| [JavaScript][JavaScript]  | ✅    | ✅      | ⏳   | ✅       |
+| [Python][Python]          | ✅    | ⏳      | ✅   | ⏳       |
+| [Java][Java]              | ✅    | ✅      | ✅   | ⏳       |
+| [PHP][PHP]                | ✅    | ✅      | ✅   | ❌       |
+| CSS                       | N/A   | N/A     | N/A  | N/A      |
+| [C# and .NET][CSHARP]     | ✅    | ✅      | ✅   | ✅       |
+| [C++][CPLUSPLUS]          | ✅    | ✅      | ✅   | ❌       |
+| [TypeScript][TypeScript]  | ✅    | ⏳      | ❌   | ✅       |
+| [Ruby][Ruby]              | ✅    | ✅      | ✅   | ❌       |
+| [C][C]                    | ✅    | ✅      | ✅   | ❌       |
+| [Swift][Swift]            | ✅    | ✅      | ✅   | ❌       |
+| [R][R]                    | ❌    | ✅      | ❌   | ❌       |
+| [Objective-C][ObjectiveC] | ?     | ❌      | ❌   | ❌       |
+| Shell                     | N/A   | N/A     | N/A  | N/A      |
+| [Scala (JVM)][Scala]      | ✅    | ✅      | ✅   | ⏳       |
+| [Scala (native)][Scala]   | ⏳    | ❌      | ❌   | ❌       | 
+| [Go][Go]                  | ✅    | ✅      | ✅   | ✅       |
+| [PowerShell][PowerShell]  | ❌    | ❌      | ❌   | ❌       |
+| [Kotlin (JVM)][Kotlin]    | ✅    | ✅      | ✅   | ⏳       |
+| [Kotlin (Native)][Kotlin] | ⏳    | ✅      | ⏳   | ❌       |
+| [Rust][Rust]              | ✅    | ✅      | ✅   | ✅       |
+| [Dart][Dart]              | ❌    | ⏳      | ❌   | ❌       |
+
+* _Core_ means there is an implementation of WebAssembly 1.0
+* _Browser_ means there is at least one browser implementation
+* _WASI_ means the language supports at least Preview 1 of the WASI proposal
+* _Spin SDK_ indicates there is a Spin SDK for the language
+
+Anything with WASI or Spin SDK support runs on Fermyon Cloud, Spin, and Fermyon Platform.
 
 ## WebAssembly Specific Languages
 
-| Language                  | Browser | CLI | WASI | Notes |
-| ------------------------- | ------- | --- | ---- | ----- |
-| [AssemblyScript][AssemblyScript] | ✅  | ✅ | ✅ | |
-| [Grain][Grain]                   | ✅  | ✅ | ✅ | |
-| [Motoko][Motoko]                 | ✅  | ✅ | ✅ | |
+| Language                         | Browser | CLI | WASI | Spin SDK |
+| -------------------------------- | ------- | --- | ---- | -------- |
+| [AssemblyScript][AssemblyScript] | ✅      | ✅  | ✅   | ❌       |
+| [Grain][Grain]                   | ✅      | ✅  | ✅   | ❌       |
+| [Motoko][Motoko]                 | ✅      | ✅  | ✅   | ❌       |
+
+* _Browser_ means there is at least one browser implementation
+* _CLI_ means the language has a CLI runtime mode
+* _WASI_ means the language supports at least Preview 1 of the WASI proposal
+* _Spin SDK_ indicates there is a Spin SDK for the language
 
 ## Other Notable Languages
 
 These languages enjoy broad use (though perhaps not in the top 20) and have at least some degree of WebAssembly Support
 
-| Language                  | Browser | CLI | WASI | Notes |
-| ------------------------- | ------- | --- | ---- | ----- |
-| [COBOL][Cobol]            |⏳ | ✅ | ⏳ |  |
-| [Erlang (BEAM)][Erlang]   | ⏳ | ⏳ | ⏳ |  |
-| [Haskell][Haskell]        | ✅  | ✅ | ✅ | |
-| [Lisp][Lisp]              | ⏳ | ⏳ | ⏳ |  |
-| [Lua][Lua]                | ✅ | ❌ | ❌ |  |
-| [Perl][Perl]              | ✅ | ❌ | ❌ |  |
-| [Zig][Zig]                | ✅  | ✅ | ✅ | |
+| Language                  | Browser | CLI | WASI | Spin SDK |
+| ------------------------- | ------- | --- | ---- | -------- |
+| [COBOL][Cobol]            | ⏳      | ✅  | ⏳   | ❌       |
+| [Erlang (BEAM)][Erlang]   | ⏳      | ⏳  | ⏳   | ❌       |
+| [Haskell][Haskell]        | ✅      | ✅  | ✅   | ❌       |
+| [Lisp][Lisp]              | ⏳      | ⏳  | ⏳   | ❌       |
+| [Lua][Lua]                | ✅      | ❌  | ❌   | ❌       |
+| [Perl][Perl]              | ✅      | ❌  | ❌   | ❌       |
+| [Zig][Zig]                | ✅      | ✅  | ✅   | ❌       |
+
+* _Browser_ means there is at least one browser implementation
+* _CLI_ means the language has a CLI runtime mode
+* _WASI_ means the language supports at least Preview 1 of the WASI proposal
+* _Spin SDK_ indicates there is a Spin SDK for the language
 
 ## How To Read These Charts
 
@@ -70,9 +89,9 @@ For each environment, we use the following icons to indicate a level of support:
 - ✅  Usable
 - ⏳ In progress
 - ❌ Not implemented
-- N/A Not applicable
+- `N/A` Not applicable
 
-The Fermyon Platform requires [WASI](https://wasi.dev) support. Any language that has a ✅ for WASI should be supported on the Fermyon Platform.
+Spin, Fermyon Platform and Fermyon Cloud require [WASI](https://wasi.dev) support. Any language that has a ✅ for WASI should be supported on the Fermyon Platform. The *Spin SDK* indicates that there is additional libraries available for Spin.
 
 >> If you are interested in contributing to this guide, head on over to [the GitHub repo](https://github.com/fermyon/wasm-languages).
 
