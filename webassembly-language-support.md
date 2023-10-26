@@ -75,6 +75,7 @@ These languages enjoy broad use (though perhaps not in the top 20) and have at l
 | [Lisp][Lisp]              | ⏳      | ⏳  | ⏳   | ❌       |
 | [Lua][Lua]                | ✅      | ❌  | ❌   | ❌       |
 | [Perl][Perl]              | ✅      | ❌  | ❌   | ❌       |
+| [Prolog][Prolog]          | ✅      | ❌  | ❌   | ✅       |
 | [Zig][Zig]                | ✅      | ✅  | ✅   | ❌       |
 
 * _Browser_ means there is at least one browser implementation
@@ -137,6 +138,7 @@ Throughout our pages, we talk about technologies like WASI, Wagi, and Spin. Many
 [Lisp]: /wasm-languages/lisp
 [Lua]: /wasm-languages/lua
 [perl]: /wasm-languages/perl
+[prolog]: /wasm-languages/prolog
 [Zig]: /wasm-languages/zig
 
 [Standards]: /wasm-languages/standards
