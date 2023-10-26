@@ -30,7 +30,7 @@ Some languages, like CSS, PowerShell, and "Shell", don't really have a meaningfu
 | [TypeScript][TypeScript]  | ✅    | ⏳      | ❌   | ✅       |
 | [Ruby][Ruby]              | ✅    | ✅      | ✅   | ❌       |
 | [C][C]                    | ✅    | ✅      | ✅   | ❌       |
-| [Swift][Swift]            | ✅    | ✅      | ✅   | ❌       |
+| [Swift][Swift]            | ✅    | ✅      | ✅   | ⏳       |
 | [R][R]                    | ❌    | ✅      | ❌   | ❌       |
 | [Objective-C][ObjectiveC] | ?     | ❌      | ❌   | ❌       |
 | Shell                     | N/A   | N/A     | N/A  | N/A      |
