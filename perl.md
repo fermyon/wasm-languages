@@ -5,6 +5,7 @@ tags = ["perl", "language", "webassembly"]
 template = "page_lang"
 [extra]
 author = "Fermyon Staff"
+last_modified = "2023-10-26T00:50:50Z"
 ---
 # Perl in WebAssembly
 
@@ -24,6 +25,7 @@ The [WebPerl project](https://webperl.zero-g.net/) provides a browser-centered P
 Build instructions support Perl 5.26 and newer.
 
 WebPerl does not provide a WASI implementation, and does not appear to be runnable outside of a browser.
+But the maintainer has suggested he'd [like to add WASI support](https://github.com/haukex/webperl/issues/23).
 
 ## Usage
 
