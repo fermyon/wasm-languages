@@ -39,4 +39,5 @@ Here are some great resources:
   Dart-to-Wasm work.
 - [Source code](https://github.com/dart-lang/wasm) for `package:wasm`.
 - Flutter now has [WebAssembly support for the browser](https://docs.flutter.dev/platform-integration/web/wasm)
-  * There was a great [presentation about this at Wasm I/O](https://youtu.be/Nkjc9r0WDNo?si=mWY8hJ7tw6mx3-Ne)
+- There was a great [presentation about Dart at Wasm I/O](https://youtu.be/Nkjc9r0WDNo?si=mWY8hJ7tw6mx3-Ne)
+- In May, 2023, The New Stack ran an [article about WebAssembly in Dart 3 and Flutter 3.10](https://thenewstack.io/dev-news-dart-3-meets-wasm-flutter-3-10-and-qwik-streamable-javascript/)
