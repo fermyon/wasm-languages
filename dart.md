@@ -5,7 +5,7 @@ tags = ["dart", "webassembly"]
 template = "page_lang"
 [extra]
 author = "Fermyon Staff"
-last_modified = "2022-04-16T21:50:50Z"
+last_modified = "2023-10-26T00:50:50Z"
 ---
 # Dart in WebAssembly
 
@@ -38,3 +38,5 @@ Here are some great resources:
 - There is a [tracking issue](https://github.com/dart-lang/sdk/issues/32894) for
   Dart-to-Wasm work.
 - [Source code](https://github.com/dart-lang/wasm) for `package:wasm`.
+- Flutter now has [WebAssembly support for the browser](https://docs.flutter.dev/platform-integration/web/wasm)
+  * There was a great [presentation about this at Wasm I/O](https://youtu.be/Nkjc9r0WDNo?si=mWY8hJ7tw6mx3-Ne)
