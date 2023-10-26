@@ -37,6 +37,8 @@ Target: arm64-apple-darwin21.1.0
 
 From there, the `swift` tool works as usual.
 
+One of Fermyon's engineers has been working on a [Spin SDK for Swift](https://github.com/endocrimes/swiftwasm-test). It's in its early stages.
+
 ### Optimizing
 
 You may find that optimizing Swift code with `wasm-opt` (part of [Binaryen](https://github.com/WebAssembly/binaryen)) can cut down binary size. The `hello.wasm` compiled below was 9.1M. Running it through `wasm-opt -Os` cut it down to 5.0M.
@@ -114,11 +116,14 @@ $ curl localhost:3000
 Hello, World!
 ```
 
+>> When the Swift Spin SDK is generally available, it will be possible to use many Fermyon Spin services like Key Value Store, SQLite Database, and Serverless AI.
+
 ## Learn More
 
 Here are some great resources:
 
 - It is possible to use the [Swift Package Manager with Wasm](https://book.swiftwasm.org/getting-started/swift-package.html)
+- There is a [Swift Spin SDK](https://github.com/endocrimes/swiftwasm-test) in development.
 - The [SwiftWasm Book](https://book.swiftwasm.org/) has examples and info about compiling to Wasm32+WASI
 - [yo-wasm](https://github.com/deislabs/yo-wasm) supports Swift
 - Here is a [very quick quickstart](https://betterprogramming.pub/get-started-with-swift-for-webassembly-on-macos-with-swiftwasm-5d588a086120) if the docs look too verbose
