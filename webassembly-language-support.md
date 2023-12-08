@@ -19,7 +19,7 @@ This reports on the top 20 languages from [RedMonk's ranking](https://redmonk.co
 Some languages, like CSS, PowerShell, and "Shell", don't really have a meaningful expression in Wasm. However, we have left them here for completeness.
 
 | Language                  | Core  | Browser | WASI | Spin SDK |
-| ------------------------- | ----- | ------- | ---- | -------- |
+|---------------------------| ----- | ------- | ---- | -------- |
 | [JavaScript][JavaScript]  | ✅    | ✅      | ⏳   | ✅       |
 | [Python][Python]          | ✅    | ⏳      | ✅   | ✅       |
 | [Java][Java]              | ✅    | ✅      | ✅   | ⏳       |
@@ -39,7 +39,7 @@ Some languages, like CSS, PowerShell, and "Shell", don't really have a meaningfu
 | [Go][Go]                  | ✅    | ✅      | ✅   | ✅       |
 | [PowerShell][PowerShell]  | ❌    | ❌      | ❌   | ❌       |
 | [Kotlin (JVM)][Kotlin]    | ✅    | ✅      | ✅   | ⏳       |
-| [Kotlin (Native)][Kotlin] | ⏳    | ✅      | ⏳   | ❌       |
+| [Kotlin (Wasm)][Kotlin]   | ⏳    | ✅      | ⏳   | ❌       |
 | [Rust][Rust]              | ✅    | ✅      | ✅   | ✅       |
 | [Dart][Dart]              | ❌    | ⏳      | ❌   | ❌       |
 
