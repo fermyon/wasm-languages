@@ -20,7 +20,7 @@ Some languages, like CSS, PowerShell, and "Shell", don't really have a meaningfu
 
 | Language                  | Core  | Browser | WASI | Spin SDK |
 |---------------------------| ----- | ------- | ---- | -------- |
-| [JavaScript][JavaScript]  | ✅    | ✅      | ⏳   | ✅       |
+| [JavaScript][JavaScript]  | ✅    | ✅      | ✅   | ✅       |
 | [Python][Python]          | ✅    | ⏳      | ✅   | ✅       |
 | [Java][Java]              | ✅    | ✅      | ✅   | ⏳       |
 | [PHP][PHP]                | ✅    | ✅      | ✅   | ❌       |
