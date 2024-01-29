@@ -1,91 +1,95 @@
 date = "2022-01-12T00:23:27Z"
 title = "Python in WebAssembly"
-description = "Python can almost be compiled to WebAssembly. The implementations are coming along quickly in a few places."
+description = "Python can almost be compiled to WebAssembly. The implementations are now stable."
 tags = ["python", "webassembly"]
 template = "page_lang"
 [extra]
 author = "Fermyon Staff"
+last_modified = "2023-10-26T00:50:50Z"
 ---
 # Python in WebAssembly
 
 Python is one of the most popular programming languages in the world, and its WebAssembly implementation seems to be coming along quickly.
 While it is not yet ready for use, we anticipate it will be functional in the first half of 2022.
 
-The most momentum seems to be in the CPython community, which is rapidly approaching both Emscripten-based and WASI-based implementations.
+The most momentum is in the CPython community, which is approaching both Emscripten-based and WASI-based implementations.
 
 
 ## Available Implementations
 
-When things land, they will be in the [GitHub CPython repo](https://github.com/python/cpython). The expected milestone is CPython 3.11.
+WebAssembly support is officially available in CPython 3.11 and after. The [GitHub CPython repo](https://github.com/python/cpython) has all of the code.
 
-More recently, we have been using [SingleStore's wasi-python project](https://github.com/singlestore-labs/python-wasi). As the name implies, it has full WASI support for filesystem, environment variables, random numbers, and clock access (and possibly others).
+There is also a [Spin SDK for Python](https://github.com/fermyon/spin-python-sdk) that uses CPython, but reduces startup time by preloading and initializing the scripts. There's a [detailed blog post about Python on Fermyon.com](https://www.fermyon.com/blog/spin-python-sdk) that explains this.
 
 ## Usage
 
-Using Python, a scripting language, is a little different than using compiled languages like [Rust](/wasm-languages/rust) or [AssemblyScript](/wasm-languages/assemblyscript). Not only will the runtime need the Python interpreter compiled to Wasm, but it will also need a number of Python libraries available on the WASI filesystem. We [pre-built a version that you can use](https://github.com/fermyon/wagi-python).
-
-Python scripts that are used this way do not need to be compiled to WebAssembly. They simply need to be loaded into the `python3.wasm` at startup time.
+The Spin SDK makes it very easy to build Python-based Wasm applications simply by using a Spin template that handles all of the heavy lifting.
 
 ## Example
 
-This section provides a basic example of running a Python 3 script. It is derived from a [Fermyon.com Python tutorial](https://www.fermyon.com/blog/python-wagi).
+Create a new project:
 
->> All of our examples follow [a documented pattern using common tools](/wasm-languages/about-examples).
+```console
+$ spin new http-py python-example --accept-defaults
+```
 
-Because we need both the Python 3 interpreter (compiled to Wasm) and the core Python 3 libraries, the first step in this example is to clone our pre-built demo repo: [https://github.com/fermyon/wagi-python](https://github.com/fermyon/wagi-python).
-
->> If you would prefer, you can build from source from either the [SingleStore Python repository](https://github.com/singlestore-labs/python-wasi) or from the [CPython repository](https://github.com/python/cpython).
-
-A simple Python script for Wagi looks like this:
+Take a look at the scaffolded program in `app.py`:
 
 ```python
-import sys
+from spin_http import Response
 
-print('Content-Type: text/plain; charset=UTF-8')
-print()
-print('Hello, World')
+def handle_request(request):
+
+    return Response(200,
+                    {"content-type": "text/plain"},
+                    bytes(f"Hello from the Python SDK", "utf-8"))
 ```
 
-We'll put the script above in `code/hello.py`.
-
-When creating a `modules.toml` for Wagi, you will need to use the `argv` directive to tell Wagi how to invoke `python3.wasm`:
-
-```toml
-[[module]]
-route = "/"
-module = "opt/wasi-python/bin/python3.wasm"
-volumes = { "/code" = "code", "/opt" = "opt" }
-argv = "python /code/hello.py"
-```
-
-Note that the `argv` line looks like the command you would normally invoke. However, it is not executed in a shell. Instead, this is provided so that the Python interpreter itself can see how it should act.
-
-To run the example, start `wagi`:
+Compile a Wasm binary with the scripts preloaded, and then start up a local server:
 
 ```console
-$ wagi -c modules.toml
-No log_dir specified, using temporary directory /var/folders/rk/mkbs8vx12zs0gkm680h_gth00000gn/T/.tmpTxamNm for logs
-Ready: serving on http://127.0.0.1:3000
+$ spin build --up
+Building component python-example with `spin py2wasm app -o app.wasm`
+Spin-compatible module built successfully
+Finished building all Spin components
+Logging component stdio to ".spin/logs/"
+
+Serving http://127.0.0.1:3000
+Available Routes:
+  python-example: http://127.0.0.1:3000 (wildcard)
 ```
 
-(Note that the above may take several seconds.)
-
-At this point you can use a web browser or curl to check the results:
+Test it with `curl`:
 
 ```console
-$ curl localhost:3000                                       
-Hello, World
+$ curl localhost:3000/
+Hello from the Python SDK
 ```
+
+The file `app.wasm` contains both the interpreter (in an initialized state) and all of the userland code:
+
+```console
+$ ls -lah app.wasm
+-rw-r--r--  1 technosophos  staff    24M Oct 26 18:22 app.wasm
+```
+
 
 ## Learn More
 
-Here are some great resources:
+Joel's video on Spin, Python, and Components:
 
-- A detailed document about  [the current state and features of Wasm](https://pythondev.readthedocs.io/wasm.html) in the latest CPython version
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PkAO17lmqsI?si=mO2rY-u06IvWB-gv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+Here are some great resources:
+- A tutorial for building [Python Wasm apps with Spin](https://dev.to/technosophos/building-a-serverless-webassembly-app-with-spin-5dh9)
+- A tutorial doing [AI inferencing with Python and Spin](https://www.wasm.builders/technosophos/serverless-ai-inferencing-with-python-and-wasm-3lkd)
+- The [Spin Python SDK](https://github.com/fermyon/spin-python-sdk)
+- The [Spin Developer Docs](https://developer.fermyon.com/spin) fully document the Python SDKs
+- [Python Wasm examples](https://developer.fermyon.com/hub) at Spin Up Hub
+- The [Componentize-Py](https://pypi.org/project/componentize-py/) tooling
+- VMware has a [distribution of CPython as Wasm](https://github.com/vmware-labs/webassembly-language-runtimes/tree/main/python) based on official CPython
+- A detailed document about  [the (once) current state and features of Wasm](https://pythondev.readthedocs.io/wasm.html) in the latest CPython version (Now outdated)
 - Fermyon.com published a slightly more [in-depth Python and Wasm tutorial](https://www.fermyon.com/blog/python-wagi)
-- An in-browser [Python shell in Wasm](https://github.com/ethanhs/python-wasm)
+- An in-browser [Python shell in Wasm](https://github.com/ethanhs/python-wasm) (Not the preferred path)
 - One version of [CPython + Wasm](https://github.com/ethanhs/python-wasm), where they are working on [WASI support](https://github.com/ethanhs/python-wasm/issues/18)
-- Recent work on [WASI support in Python](https://bugs.python.org/issue46315)
-- CPython has made progress on an [Emscripten-targeted Wasm target](https://bugs.python.org/issue40280). See also [this patch](https://github.com/python/cpython/pull/30495).
-- There is currently a patch for [Python 3.11](https://bugs.python.org/issue46315).
-- Much is happening on the [WebAssembly Discord](https://discord.com/channels/453584038356058112/915046161126137856) server. Check the `#python` channel.
+- [SingleStore's wasi-python project](https://github.com/singlestore-labs/python-wasi) is another approach
