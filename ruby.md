@@ -17,6 +17,8 @@ Ruby now has multiple WebAssembly-based projects, including an official release 
 
 There is an official [Wasm build of Ruby](https://github.com/ruby/ruby.wasm/).
 It supports WASI and a wide array of features.
+VMware provides a [release of the official Ruby runtime as Wasm](https://github.com/vmware-labs/webassembly-language-runtimes)
+Shopify has a [Wizer-optimized version of Ruby](https://github.com/Shopify/ruvy), which they call Ruvy, that speeds up startup time. This, too, uses the official CRuby.
 
 In addition to the official Ruby distribution, [Artichoke](https://www.artichokeruby.org/) is a Rust implementation of Ruby that can compile to WebAssembly (`wasm32-unknown`).
 
@@ -178,6 +180,9 @@ And that's all there is to it.
 Here are some great resources:
 
 - The [official project](https://github.com/ruby/ruby.wasm) explains building `ruby.wasm`
+- [Ruvy](https://github.com/Shopify/ruvy) is the official Ruby, but optimized (via Wizer) for faster startup times, and to not load script files. This works similarly to Fermyon's JS and Python SDKs.
+- VMware's [Ruby interpreter compiled to Wasm](https://github.com/vmware-labs/webassembly-language-runtimes)
+- InfoWorld (Oct. 2023) explains Shopify's new [Ruvy runtime](https://www.infoworld.com/article/3709509/ruvy-converts-ruby-code-to-webassembly.html)
 - An update on [the state of Ruby, Wasm, and WASI](https://medium.com/@kateinoigakukun/final-report-webassembly-wasi-support-in-ruby-4aface7d90c9) in March, 2022
 - Instructions for [building Ruby with wasm32-wasi support](https://github.com/ruby/ruby/pull/5407)
 - A fun [dice roller browser app](https://repl-wasm.bcdice.org/) written in Ruby. Source is on [GitHub](https://github.com/bcdice/repl.wasm)
