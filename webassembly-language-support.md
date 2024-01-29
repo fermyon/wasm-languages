@@ -69,6 +69,7 @@ These languages enjoy broad use (though perhaps not in the top 20) and have at l
 
 | Language                  | Browser | CLI | WASI | Spin SDK |
 | ------------------------- | ------- | --- | ---- | -------- |
+| [Clojure][Clojure]        | ✅      | ✅  | ✅   | ⏳       |
 | [COBOL][Cobol]            | ⏳      | ✅  | ⏳   | ❌       |
 | [Erlang (BEAM)][Erlang]   | ⏳      | ⏳  | ⏳   | ❌       |
 | [Haskell][Haskell]        | ✅      | ✅  | ✅   | ❌       |
@@ -133,6 +134,7 @@ Throughout our pages, we talk about technologies like WASI, Wagi, and Spin. Many
 [Motoko]: /wasm-languages/motoko
 
 [Cobol]: /wasm-languages/cobol
+[Clojure]: /wasm-languages/clojure
 [Erlang]: /wasm-languages/erlang-beam
 [Haskell]: /wasm-languages/haskell
 [Lisp]: /wasm-languages/lisp
