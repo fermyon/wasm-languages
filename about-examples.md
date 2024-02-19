@@ -27,8 +27,8 @@ Providing detailed language-specific examples is beyond the scope of the languag
 
 Our canonical example is to build a simple web page that prints `Hello, World` in plain text. In order to serve it as a web page, we try to write the script using one of two tools:
 
-- [Spin](https://spin.fermyon.dev/), is a framework for building WebAssembly-based web applications and microservices.
-- [Wagi](https://github.com/deislabs/wagi), is used in older content from before Spin was released. All Wagi applications run on Spin (though you must use a `spin.toml` instead of a `modules.toml`)
+- [Spin](https://spin.fermyon.dev/), a framework for building WebAssembly-based web applications and microservices.
+- [Wagi](https://github.com/deislabs/wagi), used in older content from before Spin was released. All Wagi applications run on Spin (though you must use a `spin.toml` instead of a `modules.toml`).
 
 For command line examples, the example runs with [wasmtime](https://wasmtime.dev/), which is committed to implementing the WASI specification.
 

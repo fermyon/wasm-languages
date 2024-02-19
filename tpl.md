@@ -3,13 +3,16 @@ title = "Python in WebAssembly"
 description = "can be compiled to WebAssembly."
 tags = ["language", "webassembly"]
 template = "page_lang"
+<!---
+Delete the published = false line below before creating the PR
+-->
 published = false
 [extra]
 author = "Fermyon Staff"
 
 ---
 
-# $ in WebAssembly
+# X in WebAssembly
 
 <!--
 A sentence or two about the language. Make sure to say whether it is scripting, compiled, etc.

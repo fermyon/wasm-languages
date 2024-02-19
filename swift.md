@@ -27,7 +27,7 @@ destined either for the browser or for a WASI environment.
 
 The [SwiftWasm](https://swiftwasm.org/) project compiles Swift to WebAssembly. While this is a community-led project, the [stated goal](https://book.swiftwasm.org/index.html) of the project is:
 
-> To fully support the WebAssembly target for Swift and to be merged into the upstream repository.
+> [T]o fully support the WebAssembly target for Swift and to be merged into the upstream repository.
 
 It works like a drop-in replacement to the standard Swift tools.
 
