@@ -5,7 +5,17 @@ tags = ["zig", "webassembly"]
 template = "page_lang"
 [extra]
 author = "Fermyon Staff"
+
 ---
+
+- [Zig in WebAssembly](#zig-in-webassembly)
+  - [Available Implementations](#available-implementations)
+  - [Usage](#usage)
+  - [Pros and Cons](#pros-and-cons)
+  - [Example](#example)
+  - [Learn More](#learn-more)
+  - [Learn More](#learn-more-1)
+
 # Zig in WebAssembly
 
 Zig, a systems language, has official support for WebAssembly.

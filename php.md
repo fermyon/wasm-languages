@@ -5,7 +5,14 @@ tags = ["PHP", "webassembly"]
 template = "page_lang"
 [extra]
 author = "Fermyon Staff"
+
 ---
+
+- [PHP in WebAssembly](#php-in-webassembly)
+  - [Uses](#uses)
+  - [Available Implementations](#available-implementations)
+  - [Learn More](#learn-more)
+
 # PHP in WebAssembly
 
 PHP is a popular web scripting language.
@@ -26,7 +33,6 @@ access to a database (SQLite) and file system access.
 - The original version of PHP-In-Browser (PIB) was [Oraoto's version](https://oraoto.github.io/pib/)
 - Another version of PIB is [Soyuka's fork](https://github.com/soyuka/php-wasm)
 - [`wasm32-wasi` PHP releases](https://github.com/vmware-labs/webassembly-language-runtimes/releases?q=php&expanded=true) provided by the Wasm Labs team at VMware
-
 
 ## Learn More
 

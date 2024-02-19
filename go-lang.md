@@ -5,7 +5,16 @@ tags = ["go", "golang", "webassembly"]
 template = "page_lang"
 [extra]
 author = "Fermyon Staff"
+
 ---
+
+- [Go in WebAssembly](#go-in-webassembly)
+	- [Available Implementations](#available-implementations)
+	- [Usage](#usage)
+	- [Pros and Cons](#pros-and-cons)
+	- [Example](#example)
+	- [Learn More](#learn-more)
+
 # Go in WebAssembly
 
 Go was early to the WebAssembly game, with the Go compiler producing `wasm32` output alongside its regularly supported build targets.
@@ -27,7 +36,6 @@ That means you can write Go code targeting the Fermyon Platform.
 
 ## Pros and Cons
 
-
 Things we like:
 
 - TinyGo works very well
@@ -41,7 +49,6 @@ Things we're not big fans of:
 
 - Upstream (mainline) Go does not have WASI support
 - TinyGo is still missing (mostly reflection-based) features of Go
-
 
 ## Example
 

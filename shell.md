@@ -3,10 +3,16 @@ title = "Shell in WebAssembly"
 description = "Various projects are implementing shell-like implementations in WebAssembly"
 tags = ["shell", "bash", "sh", "csh", "unix"]
 template = "page_lang"
-
 [extra]
 author = "Fermyon Staff"
+
 ---
+
+- [Shell in WebAssembly](#shell-in-webassembly)
+  - [Available Implementations](#available-implementations)
+  - [Usage](#usage)
+  - [Learn More](#learn-more)
+
 # Shell in WebAssembly
 
 "Shell" refers to the class of UNIX-like languages that are designed for interactive prompts and shell scripts.

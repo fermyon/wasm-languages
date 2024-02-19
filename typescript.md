@@ -5,7 +5,12 @@ tags = ["typescript", "javascript", "webassembly"]
 template = "page_lang"
 [extra]
 author = "Fermyon Staff"
+
 ---
+
+- [TypeScript in WebAssembly](#typescript-in-webassembly)
+  - [Learn More](#learn-more)
+
 # TypeScript in WebAssembly
 
 TypeScript is a popular language in its own right, but it is a very near relative of JavaScript.
@@ -13,7 +18,6 @@ In fact, most of the time, TS code is converted to JavaScript during the develop
 As such, the best approach to using TypeScript in WebAssembly is to convert it and [use JavaScript tools](/wasm-languages/javascript).
 
 Another potential solution is to [use AssemblyScript](/wasm-languages/assemblyscript), a subset of TypeScript tooled specifically for WebAssembly.
-
 
 ## Learn More
 

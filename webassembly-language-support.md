@@ -2,14 +2,18 @@ date = "2022-01-11T20:08:47Z"
 title = "WebAssembly Language Support Matrix"
 description = "Tracking the programming languages that compile to WebAssembly (Wasm). This page stays up to date with information about which languages can compile to Wasm, and what their language characteristics are."
 template = "page"
-
-# Most important first
 tags = ["webassembly", "programming languages", "javascript", "python", "rust", "dotnet", "ruby"]
-
 [extra]
 author = "Fermyon Staff"
-# author_page = "/author/"
+
 ---
+
+- [WebAssembly Support in Top 20 Languages](#webassembly-support-in-top-20-languages)
+- [WebAssembly Specific Languages](#webassembly-specific-languages)
+- [Other Notable Languages](#other-notable-languages)
+- [How To Read These Charts](#how-to-read-these-charts)
+- [Updates and Additions](#updates-and-additions)
+- [Relevant Standards](#relevant-standards)
 
 This guide tracks support for compiling a language to WebAssembly. It is organized into three sections: Support for the top 20 languages, WebAssembly-specific languages, and other notable languages. We track whether the language can be compiled to run in the browser, in other non-browser environments, and in a [WASI](https://wasi.dev) environment. In the detail page for each language, we do our best to not only state the current level of support, but also point to an array of useful resources.
 

@@ -5,7 +5,17 @@ tags = ["swift", "webassembly"]
 template = "page_lang"
 [extra]
 author = "Fermyon Staff"
+
 ---
+
+- [Swift in WebAssembly](#swift-in-webassembly)
+  - [Available Implementations](#available-implementations)
+  - [Usage](#usage)
+    - [Optimizing](#optimizing)
+  - [Pros and Cons](#pros-and-cons)
+  - [Example](#example)
+  - [Learn More](#learn-more)
+
 # Swift in WebAssembly
 
 Swift is a popular language in the Apple ecosystem.
@@ -17,7 +27,7 @@ destined either for the browser or for a WASI environment.
 
 The [SwiftWasm](https://swiftwasm.org/) project compiles Swift to WebAssembly. While this is a community-led project, the [stated goal](https://book.swiftwasm.org/index.html) of the project is:
 
-> [T]o fully support the WebAssembly target for Swift and to be merged into the upstream repository.
+> To fully support the WebAssembly target for Swift and to be merged into the upstream repository.
 
 It works like a drop-in replacement to the standard Swift tools.
 
@@ -58,7 +68,6 @@ We're neutral about:
 Things we're not big fans of:
 
 - There is no Windows support
-
 
 ## Example
 

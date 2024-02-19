@@ -2,14 +2,17 @@ date = "2022-01-11T21:06:42Z"
 title = "JavaScript in WebAssembly"
 description = "JavaScript can be compiled to WebAssembly. There are even multiple implementations of JavaScript WebAssembly runtimes."
 template = "page_lang"
-
-# Most important first
 tags = ["javascript","webassembly"]
-
 [extra]
 author = "Fermyon Staff"
-# author_page = "/author/"
+
 ---
+
+- [JavaScript in WebAssembly](#javascript-in-webassembly)
+  - [Uses](#uses)
+  - [Available JavaScript Implementations](#available-javascript-implementations)
+  - [Learn More](#learn-more)
+
 # JavaScript in WebAssembly
 
 Compiling JavaScript to WebAssembly is different than using JavaScript to talk to a WebAssembly module.

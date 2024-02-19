@@ -5,7 +5,17 @@ tags = ["rust", "webassembly"]
 template = "page_lang"
 [extra]
 author = "Fermyon Staff"
+
 ---
+
+- [Rust in WebAssembly](#rust-in-webassembly)
+  - [Available Implementations](#available-implementations)
+  - [Usage](#usage)
+  - [Pros and Cons](#pros-and-cons)
+  - [Example](#example)
+    - [Writing Wagi-based Rust Apps](#writing-wagi-based-rust-apps)
+  - [Learn More](#learn-more)
+
 # Rust in WebAssembly
 
 Rust is probably the best supported language of the WebAssembly ecosystem.
@@ -47,11 +57,9 @@ Things we like:
 - Thanks to Cargo's flexible build system, some crates even have special feature flags to enable Wasm features (e.g. Chrono)
 - Because of Rust's memory management techniques, Rust binary sizes are small compared to similar languages
 
-
 Things we're not big fans of:
 
 - Many Rust libraries do not work with Wasm. Most notably, anything that uses Tokio or `async` does not yet work.
-
 
 ## Example
 

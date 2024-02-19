@@ -6,7 +6,17 @@ template = "page_lang"
 [extra]
 author = "Fermyon Staff"
 last_modified = "2022-03-10T21:50:50Z"
+
 ---
+
+- [AssemblyScript in WebAssembly](#assemblyscript-in-webassembly)
+  - [Available Implementations](#available-implementations)
+  - [Usage](#usage)
+  - [Pros and Cons](#pros-and-cons)
+  - [Example](#example)
+    - [Running in `wasmtime`](#running-in-wasmtime)
+  - [Learn More](#learn-more)
+
 # AssemblyScript in WebAssembly
 
 Inspired by [TypeScript](/wasm-langauges/typescript), AssemblyScript is a strongly typed language. It was written specifically with WebAssembly in mind, and the entire toolchain is oriented around WebAssembly.
@@ -174,10 +184,8 @@ $ npm run asbuild
 > hello@1.0.0 asbuild
 > npm run asbuild:untouched && npm run asbuild:optimized
 
-
 > hello@1.0.0 asbuild:untouched
 > asc assembly/index.ts --target debug
-
 
 > hello@1.0.0 asbuild:optimized
 > asc assembly/index.ts --target release
@@ -201,6 +209,7 @@ drwxr-xr-x  11 technosophos  staff   352B Mar  8 16:07 ..
 
 Map files are for the browser. WAT files are large text file versions of the WebAssembly. The `.wasm` files are the ones we care about. In general, the `optimized.wasm` file is the one we use.
 
+<!-- markdownlint-disable-next-line titlecase-rule -->
 ### Running in `wasmtime`
 
 This is how the module is run in [wasmtime](https://wasmtime.dev/):

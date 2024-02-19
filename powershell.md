@@ -5,7 +5,12 @@ tags = ["powershell", "webassembly"]
 template = "page_lang"
 [extra]
 author = "Fermyon Staff"
+
 ---
+
+- [PowerShell and WebAssembly](#powershell-and-webassembly)
+  - [Learn More](#learn-more)
+
 # PowerShell and WebAssembly
 
 PowerShell is consistently ranked among the top programming languages.

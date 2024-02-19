@@ -6,14 +6,21 @@ template = "page_lang"
 [extra]
 author = "Fermyon Staff"
 last_modified = "2023-10-26T00:50:50Z"
+
 ---
+
+- [Python in WebAssembly](#python-in-webassembly)
+  - [Available Implementations](#available-implementations)
+  - [Usage](#usage)
+  - [Example](#example)
+  - [Learn More](#learn-more)
+
 # Python in WebAssembly
 
 Python is one of the most popular programming languages in the world, and its WebAssembly implementation seems to be coming along quickly.
 While it is not yet ready for use, we anticipate it will be functional in the first half of 2022.
 
 The most momentum is in the CPython community, which is approaching both Emscripten-based and WASI-based implementations.
-
 
 ## Available Implementations
 
@@ -72,7 +79,6 @@ The file `app.wasm` contains both the interpreter (in an initialized state) and 
 $ ls -lah app.wasm
 -rw-r--r--  1 technosophos  staff    24M Oct 26 18:22 app.wasm
 ```
-
 
 ## Learn More
 

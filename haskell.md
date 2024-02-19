@@ -5,7 +5,16 @@ tags = ["haskell", "webassembly", "asterius"]
 template = "page_lang"
 [extra]
 author = "Fermyon Staff"
+
 ---
+
+- [Haskell in WebAssembly](#haskell-in-webassembly)
+  - [Available Implementations](#available-implementations)
+  - [Usage](#usage)
+  - [Pros and Cons](#pros-and-cons)
+  - [Example](#example)
+  - [Learn More](#learn-more)
+
 # Haskell in WebAssembly
 
 [Haskell](https://www.haskell.org/) is a purely functional programming language.

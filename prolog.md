@@ -3,10 +3,18 @@ title = "Prolog in WebAssembly"
 description = "Prolog can be compiled to WebAssembly, and there are many supporting projects."
 tags = ["language", "webassembly"]
 template = "page_lang"
-
 [extra]
 author = "Fermyon Staff"
+
 ---
+
+- [Prolog in WebAssembly](#prolog-in-webassembly)
+	- [Available Implementations](#available-implementations)
+	- [Usage](#usage)
+	- [Pros and Cons](#pros-and-cons)
+	- [Example](#example)
+	- [Learn More](#learn-more)
+
 # Prolog in WebAssembly
 
 <!--
@@ -62,7 +70,6 @@ Things we like:
 
 - It is super easy to use
 - [A Spin SDK!](https://github.com/guregu/trealla-spin)
-
 
 ## Example
 

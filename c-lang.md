@@ -6,12 +6,23 @@ template = "page_lang"
 [extra]
 author = "Fermyon Staff"
 last_modified = "2022-03-10T21:50:50Z"
+
 ---
+- [C in WebAssembly](#c-in-webassembly)
+  - [Available Implementations](#available-implementations)
+    - [WASI SDK and Clang/LLVM](#wasi-sdk-and-clangllvm)
+    - [Emscripten](#emscripten)
+  - [Usage](#usage)
+  - [Pros and Cons](#pros-and-cons)
+  - [Examples](#examples)
+    - [Compiling C Using the Zig Compiler Toolchain](#compiling-c-using-the-zig-compiler-toolchain)
+  - [Learn More](#learn-more)
+
 # C in WebAssembly
 
 C is a low-level programming language that is typically compiled into a native executable. It is one of the most well-known and frequently used languages.
 
-C is one of the best supported WebAssembly languages. The original developers of WebAssembly had C in mind as a target language, and have put significant work into C support.
+C is one of the best-supported WebAssembly languages. The original developers of WebAssembly had C in mind as a target language, and have put significant work into C support.
 
 Because C++ (aka CPP) is a C language, it is frequently the case that C++ programs can also be compiled to WebAssembly. In addition to this document, there is also a WebAssembly Language Support page [specifically for C++](/wasm-languages/cpp).
 
@@ -43,7 +54,7 @@ While C is a low-level language, not all of the `stdlib` is supported by WebAsse
 
 It is good to be familiar with both [WASI](https://wasi.dev) and the WebAssembly runtime's host extensions when writing or porting C or C++ code.
 
-## Pros an Cons
+## Pros and Cons
 
 Things we like about C/C++ as a WebAssembly language:
 
@@ -128,7 +139,7 @@ $ curl localhost:3000
 Hello, World
 ```
 
-### Compiling C using the Zig compiler toolchain
+### Compiling C Using the Zig Compiler Toolchain
 
 Users have reported that it is easier to compile C programs with Zig. With Zig, you will not need to separately install the WASI SDK, as it is included with the toolchain.
 
@@ -150,7 +161,7 @@ To compile with Zig, use a `zig build-exe` with the `-lc` ("library C") flag:
 $ zig build-exe -O ReleaseSmall -target wasm32-wasi hello.c -lc
 ```
 
-Now the `hello.wasm` can be run in `wasmtime` or `spin`.
+Now the `hello.wasm` can be run in `wasmtime` or `spin`:
 
 ```console
 $ wasmtime hello.wasm

@@ -5,7 +5,16 @@ tags = ["grain", "webassembly"]
 template = "page_lang"
 [extra]
 author = "Fermyon Staff"
+
 ---
+
+- [Grain in WebAssembly](#grain-in-webassembly)
+  - [Available Implementations](#available-implementations)
+  - [Usage](#usage)
+  - [Pros and Cons](#pros-and-cons)
+  - [Example](#example)
+  - [Learn More](#learn-more)
+
 # Grain in WebAssembly
 
 Grain is a functional programming language that is designed specifically to compile to WebAssembly.
@@ -35,7 +44,6 @@ We're neutral about:
 Things we're not big fans of:
 
 - Not a lot of third party libraries yet
-
 
 ## Example
 
@@ -79,7 +87,6 @@ executor = { type = "wagi" }
 ```
 
 From there, you can use `spin up` to start a server, and see the results on `http://localhost:3000`.
-
 
 ## Learn More
 

@@ -5,7 +5,16 @@ tags = ["kotlin", "jvm", "java", "webassembly"]
 template = "page_lang"
 [extra]
 author = "Fermyon Staff"
+
 ---
+
+- [Kotlin in WebAssembly](#kotlin-in-webassembly)
+    - [Kotlin/Wasm](#kotlinwasm)
+    - [Kotlin on JRE](#kotlin-on-jre)
+  - [Uses](#uses)
+  - [Available Implementations](#available-implementations)
+  - [Learn More](#learn-more)
+
 # Kotlin in WebAssembly
 
 Kotlin, like .NET, has an interesting history with WebAssembly.

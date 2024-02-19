@@ -3,10 +3,16 @@ title = "Lisp in WebAssembly"
 description = "Lisp can be compiled to WebAssembly."
 tags = ["language", "webassembly"]
 template = "page_lang"
-
 [extra]
 author = "Fermyon Staff"
+
 ---
+
+- [Lisp in WebAssembly](#lisp-in-webassembly)
+  - [Uses](#uses)
+  - [Available Implementations](#available-implementations)
+  - [Learn More](#learn-more)
+
 # Lisp in WebAssembly
 
 The famous functional programming language Lisp has some interesting properties that has intrigued developers. A few projects are work-in-progress ports of Lisp in WebAssembly. Nothing appears to be production-ready yet, but the progress is promising.

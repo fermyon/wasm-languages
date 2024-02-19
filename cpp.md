@@ -6,7 +6,15 @@ template = "page_lang"
 [extra]
 author = "Fermyon Staff"
 last_modified = "2022-03-10T21:50:50Z"
+
 ---
+
+- [C++ in WebAssembly](#c-in-webassembly)
+  - [Usage](#usage)
+  - [Pros and Cons](#pros-and-cons)
+  - [Examples](#examples)
+  - [Learn More](#learn-more)
+
 # C++ in WebAssembly
 
 C++ support for WebAssembly is handled by the [C language support](/wasm-languages/c-lang). And C language support is currently excellent.

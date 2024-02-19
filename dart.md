@@ -6,7 +6,14 @@ template = "page_lang"
 [extra]
 author = "Fermyon Staff"
 last_modified = "2023-10-26T00:50:50Z"
+
 ---
+
+- [Dart in WebAssembly](#dart-in-webassembly)
+  - [Pros and Cons](#pros-and-cons)
+  - [Examples](#examples)
+  - [Learn More](#learn-more)
+
 # Dart in WebAssembly
 
 Dart is a programming language designed for client development. The Dart team is

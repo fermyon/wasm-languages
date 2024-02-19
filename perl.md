@@ -6,7 +6,15 @@ template = "page_lang"
 [extra]
 author = "Fermyon Staff"
 last_modified = "2023-10-26T00:50:50Z"
+
 ---
+
+- [Perl in WebAssembly](#perl-in-webassembly)
+  - [Available Implementations](#available-implementations)
+  - [Usage](#usage)
+  - [Pros and Cons](#pros-and-cons)
+  - [Learn More](#learn-more)
+
 # Perl in WebAssembly
 
 Perl (Practical Extraction and Reporting Language) was the _lingua franca_ of the early web.
@@ -44,7 +52,6 @@ Things we're not big fans of:
 
 - It runs only in the browser
 - The project seems to be stagnant
-
 
 ## Learn More
 

@@ -5,7 +5,14 @@ tags = ["java", "webassembly"]
 template = "page_lang"
 [extra]
 author = "Fermyon Staff"
+
 ---
+
+- [Java in WebAssembly](#java-in-webassembly)
+  - [Uses](#uses)
+  - [Available Implementations](#available-implementations)
+  - [Learn More](#learn-more)
+
 # Java in WebAssembly
 
 Many exciting WebAssembly things are happening in the Java ecosystem.
@@ -24,7 +31,6 @@ There is a working [Wasm plus WASI version of TeaVM](https://github.com/fermyon/
 
 Here's a detailed video by Joel Dice:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MFruf7aqcbE?si=tAdqWPq1W7LqvT0p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 
 - The [Bytecoder project](https://mirkosertic.github.io/Bytecoder/) cross-compiles Java to WebAssembly that can be executed in the browser
 - The [TeaVM project](https://teavm.org/) has experimental support for browser-based WebAssembly

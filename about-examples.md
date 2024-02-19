@@ -3,11 +3,16 @@ title = "About WebAssembly Examples"
 description = "The WebAssembly examples all follow some common patterns. This page explains them"
 template = "page"
 tags = ["webassembly", "examples"]
-
 [extra]
 author = "Fermyon Staff"  # Use "Fermyon Staff" for general content
 type = "page"
+
 ---
+
+- [The Typical Example](#the-typical-example)
+- [Libraries, SDKs, and Helpers](#libraries-sdks-and-helpers)
+- [Spin Configuration](#spin-configuration)
+- [Wagi Configuration](#wagi-configuration)
 
 The [Fermyon WebAssembly Language Guide](/wasm-languages/webassembly-language-support) tracks languages that can be executed within a WebAssembly runtime. We do our best to keep things consistent across pages. This page explains how we create our examples.
 
@@ -22,10 +27,10 @@ Providing detailed language-specific examples is beyond the scope of the languag
 
 Our canonical example is to build a simple web page that prints `Hello, World` in plain text. In order to serve it as a web page, we try to write the script using one of two tools:
 
-- [Spin](https://spin.fermyon.dev/), a framework for building WebAssembly-based web applications and microservices.
-- [Wagi](https://github.com/deislabs/wagi), used in older content from before Spin was released. All Wagi applications run on Spin (though you must use a `spin.toml` instead of a `modules.toml`)
+- [Spin](https://spin.fermyon.dev/), is a framework for building WebAssembly-based web applications and microservices.
+- [Wagi](https://github.com/deislabs/wagi), is used in older content from before Spin was released. All Wagi applications run on Spin (though you must use a `spin.toml` instead of a `modules.toml`)
 
-For commandline examples, the example runs with [wasmtime](https://wasmtime.dev/), which is committed to implementing the WASI specification.
+For command line examples, the example runs with [wasmtime](https://wasmtime.dev/), which is committed to implementing the WASI specification.
 
 Other runtimes and execution environments are out of the scope of this documentation. However, you may find links to examples in the _Learn More_ section at the bottom of each language page
 

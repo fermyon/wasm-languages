@@ -5,7 +5,16 @@ tags = ["language", "webassembly", "beam", "erlang", "elixir"]
 template = "page_lang"
 [extra]
 author = "Fermyon Staff"
+
 ---
+
+- [Erlang in WebAssembly](#erlang-in-webassembly)
+  - [Available Implementations](#available-implementations)
+  - [Usage](#usage)
+  - [Pros and Cons](#pros-and-cons)
+  - [Example](#example)
+  - [Learn More](#learn-more)
+
 # Erlang in WebAssembly
 
 Erlang is the most prominent of the [BEAM languages](https://github.com/llaisdy/beam_languages). Elixir is another popular BEAM language.
@@ -30,7 +39,6 @@ Things we're not big fans of:
 
 - We could not immediately figure out exactly how Lumen works, and builds appear to be failing
 - The project might be stalled or unmaintained. It has not been updated in over a year.
-
 
 ## Example
 

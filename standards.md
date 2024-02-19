@@ -6,7 +6,14 @@ template = "page_lang"
 [extra]
 author = "Fermyon Staff"
 last_modified = "2022-07-25T21:50:50Z"
+
 ---
+
+- [WebAssembly Standard and W3 Working Group](#webassembly-standard-and-w3-working-group)
+- [WebAssembly System Interface (WASI)](#webassembly-system-interface-wasi)
+  - [The Component Model](#the-component-model)
+- [WebAssembly Gateway Interface (Wagi)](#webassembly-gateway-interface-wagi)
+- [Spin Improvement Proposals (SIPs)](#spin-improvement-proposals-sips)
 
 This page tracks WebAssembly standards along with useful resources for understanding those standards or getting involved.
 
