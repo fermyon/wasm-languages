@@ -2,7 +2,7 @@
 
 **Update 20th February 2024:**
 
-This repository is archived, and all contribution activity now takes place in markdown files at [https://github.com/fermyon/developer/wasm-languages](https://github.com/fermyon/developer/wasm-languages).
+This repository is archived, and all contribution activity now takes place in the [fermyon/developer repository](https://github.com/fermyon/developer/tree/main/content/wasm-languages).
 
 The public-facing website (that renders these markdown files) is at [https://developer.fermyon.com/wasm-languages](https://developer.fermyon.com/wasm-languages).
 
