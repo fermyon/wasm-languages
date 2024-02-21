@@ -1,7 +1,10 @@
 # Fermyon WebAssembly Language Guide
-title = "Readme"
 
-published = false
+**Update 20th February 2024:**
+
+This repository is archived, and all contribution activity now takes place in the [fermyon/developer repository](https://github.com/fermyon/developer/tree/main/content/wasm-languages).
+
+The public-facing website (that renders these markdown files) is at [https://developer.fermyon.com/wasm-languages](https://developer.fermyon.com/wasm-languages).
 
 ---
 This repository contains the Wasm Language Guide from Fermyon.com. You can see the published version at [https://www.fermyon.com/wasm-languages/webassembly-language-support](https://www.fermyon.com/wasm-languages/webassembly-language-support).
